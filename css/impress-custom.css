@@ -1,0 +1,214 @@
+﻿.tempstep {transition:opacity 2s, width 2s, background 2s;}
+.tempstep.a {opacity:0;}
+.tempstep-active {opacity:1 !important;}
+
+
+.vertex {position:absolute; border:2px solid black; border-radius:25px; width:20px; height:20px; transform:translate(-13px, 9px);  background-color:white; z-index:10;}
+.vertexNamed {position:absolute; border:2px solid black; border-radius:25px; width:40px; height:40px; transform:translate(-23px, 19px);  background-color:white; z-index:10; text-align:center;}
+.edge {position:absolute; transform-origin:0 50%; background-size:100% 100%; height:16px; z-index:5; padding:0px;}
+.flow {position:absolute; transform-origin:0 50%; background-color:green; z-index:0; transition:width 3s, opacity 0s;}
+.flow.r {background-color:red;}
+.flow.b {background-color:blue;}
+
+
+.edge {background-image:none;}
+.edge.tempClass-hl {background-image:url(../images/edgeHighlightGreen.png);}
+
+/* Car Animation */
+.car {opacity:0; transition:bottom 2s, left 2s, opacity 2s;}
+.tempClass-step1 {bottom:160px !important;}
+.tempClass-step2 {bottom:260px !important; left:80px !important;}
+.tempClass-step3 {bottom:360px !important;}
+.tempClass-step4 {bottom:260px !important; left:280px !important;}
+
+
+
+.tempClass-flowS {width:0px !important;}
+.tempClass-flowM {width:100px !important;}
+.tempClass-QueueM {left:150px !important; bottom:540px !important;}
+.tempClass-QueueP {width:200px !important;}
+
+
+/* Single->Multiple-Sources in Non-Termination-Thm */
+.tempClass-msSing::after {content:'single';}
+.tempClass-msMultR::after {content:'multi'; color:red;}
+.tempClass-msMult::after {content:'multi';}
+
+.tempClass-NonTerm {transform:rotate(45deg) translate(0px,250px);}
+.tempClass-NonTerm .label {transform:rotate(-45deg); transition:transform 4s;}
+
+.tempClass-Line0 {left:3px; transition:left 0s !important;}
+.tempClass-Line1 {left:22px;}
+.tempClass-Line2 {left:41px;}
+.tempClass-Line3 {left:60px;}
+.tempClass-Line4 {left:79px;}
+.tempClass-Line5 {left:98px;}
+
+.impress-on-NonTermination #example img {opacity:0 !important;}
+
+
+.contentBox {width:850px;}
+
+
+
+
+table {border-collapse:collapse;}
+/*tr {border-bottom:1px solid rgb(102, 102, 102);}*/
+td {padding:10px;}
+
+
+
+h1 {text-align:center; font-size:140%;}
+h2 {text-align:center; font-size:150%;}
+h3 {text-align:center; font-size:125%;}
+
+ul {margin-left:2em;}
+
+
+.onlyActive {transition: opacity 1s;}
+.past > .onlyActive, .past .onlyActive, .past.onlyActive {opacity: 0 !important;}
+
+.TeXFakeShadow {border-radius: 25px; background:darkgreen; color:#FFFFFF; padding:20px; box-shadow: 5px 5px 4px #868686; 
+				box-shadow: 10px 10px 8px #868686;}
+.TeXTitle {border-radius: 25px; background:darkgreen; color:#FFFFFF; padding:20px; box-shadow: 10px 10px 8px #868686;}
+
+.impress-on-example #title .contentBox {opacity:1 !important;}		
+.impress-on-example #title .rightBox {opacity:0;}	
+
+#Questions.past .contentBox  {opacity:0 !important;}
+		
+#NonTermination.past {opacity:0 !important;}
+		
+span.highlightcolor {transition: color 7s;}
+.substep.past span.highlightcolor {color:#000000 !important;}
+
+.theoremstyle {
+	margin-left:3em;
+	margin-bottom:1em;
+}
+
+.theoremstyle::before {
+	font-variant:small-caps;
+	font-weight:bold;
+	color:#808080;
+	text-shadow: 1px 1px 4px rgba(170,170,170,0.9);
+	display:block;
+	float:left;
+	margin-left:-3em;
+}
+
+.theoremstyle.t::before {content:"Thm:";}
+
+
+.theoremstyle.ges::before {content:"Ges.:";}
+.theoremstyle.geg::before {content:"Geg.:";}
+.theoremstyle.l::before {content:"Lem.:";}
+.theoremstyle.d::before {content:"Def.:";}
+.theoremstyle.beh::before {content:"Beh.:";}
+.theoremstyle.beob::before {content:"Beob.:";}
+.theoremstyle.f::before {content:"Folg.:";}
+.theoremstyle.prob::before {content:"Prob.:";}
+.theoremstyle.lsg::before {content:"Lsg.:";}
+.theoremstyle.i::before {content:"Idee:";}
+
+.proofstyle {
+	margin-left:3em;
+	margin-bottom:1em;
+}
+
+.proofstyle::before {
+	font-variant:small-caps;
+	font-weight:bold;
+	color:#808080;
+	text-shadow: 1px 1px 4px rgba(170,170,170,0.9);
+	display:block;
+	float:left;
+	margin-left:-3em;
+	content:"Proof:";
+}
+
+.proofstyle::after {
+	position:absolute;
+	right:20px;
+	bottom:-5px;
+	font-size:35px;
+	content:"□";
+}
+
+.proofstyle.t::before {content:"Proof of Thm:";}
+
+
+.theoremstyletop::before {
+	font-variant:small-caps;
+	font-weight:bold;
+	color:#808080;
+	text-shadow: 1px 1px 4px rgba(170,170,170,0.9);
+	display:block;
+}
+
+.theoremstyletop.s::before {content:"Satz:";}
+.theoremstyletop.l::before {content:"Lemma:";}
+.theoremstyletop.d::before {content:"Definition:";}
+
+
+span.vanish.past {display:none;}
+
+.boxed {
+	border:4px solid #000000;
+	background-color: white;
+	box-shadow: 15px 15px 8px #00000088;
+	padding:20px;
+}
+
+
+ul {
+  margin:0em 0em 0em 1em;
+  padding-left: 0;
+}
+
+
+ol {
+  counter-reset: item;
+  margin-left: 2em;
+  padding-left: 0;
+}
+ol li {
+  display: block;
+  margin-bottom: .5em;
+  margin-left: 2em;
+}
+ol li::before {
+  display: inline-block;
+  content: "(" counter(item) ") ";
+  counter-increment: item;
+  width: 1.8em;
+  margin-left: -2em;
+}
+
+.red {
+	color:red;
+}
+
+.center{
+	text-align: center;
+}
+
+
+
+
+/* Erstellen:
+.step {
+	opacity: 1 !important;
+	background-color:#FFFFFF80;
+	background-image:url(./../images/Grid.png);
+}
+
+.substep {
+	opacity: 1 !important;
+}
+
+.TeXFake {opacity:0;}
+.TeXFakeShadow  {box-shadow:none;}
+.TeXTitle {background:none; color:#000000; padding:20px; box-shadow: 5px 5px 0px #FFFFFF;}
+
+/*.onlyActive {display:none;}*/
