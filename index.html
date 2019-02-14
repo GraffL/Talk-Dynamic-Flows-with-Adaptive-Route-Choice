@@ -199,7 +199,7 @@
 				<ul>
 					<li class="tempstep a" data-tempstep-from="2">Digraph \(G = (V,E)\)</li>
 					<li class="tempstep a" data-tempstep-from="3">Edge \(e \in E\) has length \(\tau_e \in \Z_+\) and capacity \(\nu_e \in \Z_+\)</li>
-					<li class="tempstep a" data-tempstep-from="4">Travelers \(i \in I\) with source \(s_i \in V\) and sink \(t_i \in V\) and constant inflow rate \(u_i: [r_i,R_i] \to \R_+\)</li>
+					<li class="tempstep a" data-tempstep-from="4">Commodities \(i \in I\) with source \(s_i \in V\) and sink \(t_i \in V\) and constant inflow rate \(u_i: [r_i,R_i] \to \R_+\)</li>
 					<li class="tempstep a" data-tempstep-from="7">Inflow \(>\) Capacity \(\Rightarrow\) Queue forms (with length \(q_e\))</li>
 				</ul>
 		</div>
@@ -257,22 +257,24 @@
 	</div>
 	
 	
-	<div id="ModelB" class="step slide" data-x="0" data-y="0" data-scale="1" data-tempstep-number="11">
+	<div id="ModelB" class="step slide" data-x="0" data-y="0" data-scale="1" data-tempstep-number="6">
 		<div class="contentBox">
 			<div class="dummy"></div>
 		
 			<h2>The Behavioral Model</h2>
 			
-			<p class="theoremstyle d tempstep a" data-tempstep-from="2">A flow is in <em>Instantaneous Dynamic Equilibrium (IDE)</em> if the following holds: <br />
-			Whenever positive flow enters an edge, this edge must lie on a currently shortest path towards the respective sink.</p>
+			<p class="theoremstyle d tempstep a" data-tempstep-from="2">We define the <em>current travel time</em> at time \(\theta\) on edge \(e\) by: \[c_e(\theta) := \tau_e + q_e(\theta)/\nu_e\]  </p>
 			
-			<p class="tempstep a" data-tempstep-from="3">Define <em>current travel time</em> at time \(\theta\) on edge \(e\): \[c_e(\theta) := \tau_e + q_e(\theta)/\nu_e\]  </p>
+			<p class="theoremstyle d tempstep a" data-tempstep-from="3">A flow is in <em>Instantaneous Dynamic Equilibrium (IDE)</em> if the following holds: <br />
+			Whenever positive flow enters an edge, this edge must lie on a currently shortest path towards the respective sink (w.r.t. \(c\)).<br />
+			<span class="tempstep a" data-tempstep-from="4">(we call such an edge <em>active</em>)</span></p>
+
 			
-			<p class="tempstep a" data-tempstep-from="4">Define labels \(\ell_v(\theta)\) by setting \[\ell_t(\theta) := 0, \quad \ell_v(\theta) := \min_{e=vw \in E}\{c_e(\theta) + \ell_w(\theta)\}\]</p>
+<!--			<p class="tempstep a" data-tempstep-from="4">Define labels \(\ell_v(\theta)\) by setting \[\ell_t(\theta) := 0, \quad \ell_v(\theta) := \min_{e=vw \in E}\{c_e(\theta) + \ell_w(\theta)\}\]</p>
 			
 			<p class="theoremstyle d tempstep a" data-tempstep-from="8">An edge \(e=vw\) is <em>active</em> at time \(\theta\) if \(\ell_v(\theta) = \ell_w(\theta)+c_e(\theta)\).</p>
 			
-			<div class="theoremstyle tempstep a" data-tempstep-from="9" style="position:absolute; left:0px; top:195px; background-color:white; width:850px; height:100px;">For every \(\theta \geq 0\): \(f^+_e(\theta) > 0 \implies e\) is active.</div>
+			<div class="theoremstyle tempstep a" data-tempstep-from="9" style="position:absolute; left:0px; top:195px; background-color:white; width:850px; height:100px;">For every \(\theta \geq 0\): \(f^+_e(\theta) > 0 \implies e\) is active.</div>-->
 		</div>
 
 
@@ -283,20 +285,6 @@
 			<div class="vertexNamed" style="left:42px; bottom:557px;">\(s'\)</div>					
 			
 			<!-- Labels -->
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:230px; bottom:-10px;">\(5\)</div>	<!-- s -->	
-			<div class="tempstep a" data-tempstep-list="10-12" style="position:absolute; left:230px; bottom:-10px;">\(6\)</div>	<!-- s -->	
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:20px; bottom:500px;">\(2\)</div>	<!-- s' -->	
-			<div class="tempstep a" data-tempstep-list="10-12" style="position:absolute; left:20px; bottom:500px;">\(4\)</div>	<!-- s' -->	
-			<div class="tempstep a" data-tempstep-list="7-9" data-tempstep-classes="7:Alert" style="position:absolute; left:220px; bottom:130px;">\(4\)</div>	<!-- 1 -->
-			<div class="tempstep a" data-tempstep-list="10-12" style="position:absolute; left:220px; bottom:130px;">\(5\)</div>	<!-- 1 -->
-			<div class="tempstep a" data-tempstep-list="7-9" data-tempstep-classes="7:Alert" style="position:absolute; left:70px; bottom:240px;">\(2\)</div>	<!-- 2 -->	
-			<div class="tempstep a" data-tempstep-list="10-12" style="position:absolute; left:70px; bottom:240px;">\(4\)</div>	<!-- 2 -->	
-			<div class="tempstep a" data-tempstep-list="7-12" style="position:absolute; left:210px; bottom:360px;">\(3\)</div>	<!-- 3 -->
-			<div class="tempstep a" data-tempstep-list="7-12" style="position:absolute; left:320px; bottom:240px;">\(2\)</div>	<!-- 4 -->	
-			<div class="tempstep a" data-tempstep-list="6-9" data-tempstep-classes="6:Alert" style="position:absolute; left:170px; bottom:490px;">\(1\)</div>	<!-- 5 -->	
-			<div class="tempstep a" data-tempstep-list="10-12" style="position:absolute; left:170px; bottom:490px;">\(3\)</div>	<!-- 5 -->	
-			<div class="tempstep a" data-tempstep-list="6-12" data-tempstep-classes="6:Alert" style="position:absolute; left:220px; bottom:490px;">\(1\)</div>	<!-- 6 -->	
-			<div class="tempstep a" data-tempstep-list="5-12" data-tempstep-classes="5:Alert" style="position:absolute; left:230px; bottom:645px; width:100px;">\(\ell_t(\theta)=0\)</div> <!-- t -->
 		
 			
 			<!-- capacity and traveltime on edge s->1 -->
@@ -306,26 +294,26 @@
 				
 								
 			<!-- Edge 1->2 -->
-			<div class="tempstep a flow" data-tempstep-list="0-11" data-tempstep-classes="11-12:flowS" style="left:100px; bottom:250px; transform:rotate(45deg); height:15px; width:140px; margin-top:-10px;"></div>
-			<div class="tempstep a flow" data-tempstep-list="0-10" data-tempstep-classes="10-11:flowS" style="left:165px; bottom:155px; transform:rotate(135deg); height:40px; width:40px; margin-top:-10px;"></div>
-			<div class="tempstep a" data-tempstep-list="0-9" style="position:absolute; left:20px; bottom:160px; width:100px; transition-delay:1s;">\(q_e(\theta) = 1\)</div>
+			<div class="tempstep a flow" data-tempstep-list="0-6" data-tempstep-classes="6-7:flowS" style="left:100px; bottom:250px; transform:rotate(45deg); height:15px; width:140px; margin-top:-10px;"></div>
+			<div class="tempstep a flow" data-tempstep-list="0-5" data-tempstep-classes="5-6:flowS" style="left:165px; bottom:155px; transform:rotate(135deg); height:40px; width:40px; margin-top:-10px;"></div>
+			<div class="tempstep a" data-tempstep-list="0-4" style="position:absolute; left:20px; bottom:160px; width:100px; transition-delay:1s;">\(q_e(\theta) = 1\)</div>
 			
 			<!-- Edge 2->5 -->
-			<div class="tempstep a flow" data-tempstep-list="8-10" data-tempstep-classes="0-9:flowS" style="left:100px; bottom:250px; transform:rotate(-78deg); height:15px; width:245px; margin-top:-10px;"></div>
-			<div class="tempstep a flow" data-tempstep-list="11-12" data-tempstep-classes="11-12:flowS" style="left:152px; bottom:497px; transform:rotate(102deg); height:15px; width:240px; margin-top:-10px;"></div>
+			<div class="tempstep a flow" data-tempstep-list="3-5" data-tempstep-classes="0-4:flowS" style="left:100px; bottom:250px; transform:rotate(-78deg); height:15px; width:245px; margin-top:-10px;"></div>
+			<div class="tempstep a flow" data-tempstep-list="6-7" data-tempstep-classes="6-7:flowS" style="left:152px; bottom:497px; transform:rotate(102deg); height:15px; width:240px; margin-top:-10px;"></div>
 
 			
 			<!-- Edge s'-> 5 -->
-			<div class="tempstep a flow r" data-tempstep-list="0-10" data-tempstep-classes="10-11:flowS" style="left:150px; bottom:490px; transform:rotate(205deg); height:45px; width:120px; margin-top:-30px;"></div>
+			<div class="tempstep a flow r" data-tempstep-list="0-5" data-tempstep-classes="5-6:flowS" style="left:150px; bottom:490px; transform:rotate(205deg); height:45px; width:120px; margin-top:-30px;"></div>
 			
 			<!-- Edge 5->t -->
-			<div class="tempstep a flow r" data-tempstep-list="9-12" data-tempstep-classes="7-9:flowS" style="left:145px; bottom:490px; transform:rotate(-72deg); height:15px; width:155px;"></div>
-			<div class="tempstep a flow r" data-tempstep-list="9-12" data-tempstep-classes="7-9:flowS" style="left:150px; bottom:540px; transform:rotate(-162deg); height:40px; width:80px; margin-top:-30px;"></div>
-			<div class="tempstep a flow" data-tempstep-list="11-12" data-tempstep-classes="9-10:flowS" style="left:74px; bottom:565px; transform:rotate(18deg); height:40px; width:40px; margin-top:-30px;"></div>
-			<div class="tempstep a" data-tempstep-list="10-12" style="position:absolute; left:70px; bottom:620px; width:100px; transition-delay:1s;">\(q_e(\theta) = 2\)</div>
+			<div class="tempstep a flow r" data-tempstep-list="4-7" data-tempstep-classes="2-4:flowS" style="left:145px; bottom:490px; transform:rotate(-72deg); height:15px; width:155px;"></div>
+			<div class="tempstep a flow r" data-tempstep-list="4-7" data-tempstep-classes="2-4:flowS" style="left:150px; bottom:540px; transform:rotate(-162deg); height:40px; width:80px; margin-top:-30px;"></div>
+			<div class="tempstep a flow" data-tempstep-list="6-7" data-tempstep-classes="4-5:flowS" style="left:74px; bottom:565px; transform:rotate(18deg); height:40px; width:40px; margin-top:-30px;"></div>
+			<div class="tempstep a" data-tempstep-list="5-7" style="position:absolute; left:70px; bottom:620px; width:100px; transition-delay:1s;">\(q_e(\theta) = 2\)</div>
 			
 			<!-- Edge 2->3 -->
-			<div class="tempstep a flow" data-tempstep-list="9-12" data-tempstep-classes="8-10:flowS" style="left:100px; bottom:250px; transform:rotate(-45deg); height:15px; width:140px; margin-top:-10px;"></div>
+			<div class="tempstep a flow" data-tempstep-list="4-7" data-tempstep-classes="3-5:flowS" style="left:100px; bottom:250px; transform:rotate(-45deg); height:15px; width:140px; margin-top:-10px;"></div>
 		</div>
 
 		</div>
@@ -349,7 +337,7 @@
 						<td style="padding-bottom:50px;">single<br />sink</td><td></td><td></td>
 					</tr>
 					<tr class="tempstep a" data-tempstep-from="5">
-						<td>multi<br />sink</td><td></td><td></td>
+						<td>multi-<br />sink</td><td></td><td></td>
 					</tr>
 				</table>
 		</div>
@@ -361,17 +349,6 @@
 			<div class="vertexNamed" style="left:200px; bottom:655px;">\(t\)</div>					
 			<div class="vertexNamed" style="left:42px; bottom:557px;">\(s'\)</div>					
 			
-			<!-- Labels -->
-			<div style="position:absolute; left:230px; bottom:-10px;">\(6\)</div>	<!-- s -->	
-			<div style="position:absolute; left:20px; bottom:500px;">\(4\)</div>	<!-- s' -->	
-			<div style="position:absolute; left:220px; bottom:130px;">\(5\)</div>	<!-- 1 -->
-			<div style="position:absolute; left:70px; bottom:240px;">\(4\)</div>	<!-- 2 -->	
-			<div style="position:absolute; left:210px; bottom:360px;">\(3\)</div>	<!-- 3 -->
-			<div style="position:absolute; left:320px; bottom:240px;">\(2\)</div>	<!-- 4 -->	
-			<div style="position:absolute; left:170px; bottom:490px;">\(3\)</div>	<!-- 5 -->	
-			<div style="position:absolute; left:220px; bottom:490px;">\(1\)</div>	<!-- 6 -->	
-			<div style="position:absolute; left:230px; bottom:645px; width:100px;">\(\ell_t(\theta)=0\)</div> <!-- t -->
-		
 			
 			<!-- capacity and traveltime on edge s->1 -->
 			<div style="position:absolute; bottom:50px; left:220px; width:100px;">\(\tau_e = 1\)<br />\(\nu_e = 2\)</div>
@@ -411,32 +388,6 @@
 			<div class="vertexNamed" style="left:200px; bottom:655px;">\(t\)</div>					
 			<div class="vertexNamed" style="left:42px; bottom:557px;">\(s'\)</div>					
 			
-			<!-- Labels -->
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:230px; bottom:-10px;">\(6\)</div>	<!-- s -->	
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:230px; bottom:-10px;">\(5\)</div>	<!-- s -->	
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:230px; bottom:-10px;">\(4\)</div>	<!-- s -->	
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:20px; bottom:500px;">\(4\)</div>	<!-- s' -->	
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:20px; bottom:500px;">\(3\)</div>	<!-- s' -->	
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:20px; bottom:500px;">\(2\)</div>	<!-- s' -->	
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:220px; bottom:130px;">\(5\)</div>	<!-- 1 -->
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:220px; bottom:130px;">\(4\)</div>	<!-- 1 -->
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:220px; bottom:130px;">\(3\)</div>	<!-- 1 -->
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:70px; bottom:240px;">\(4\)</div>	<!-- 2 -->	
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:70px; bottom:240px;">\(3\)</div>	<!-- 2 -->
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:70px; bottom:240px;">\(2\)</div>	<!-- 2 -->
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:210px; bottom:360px;">\(3\)</div>	<!-- 3 -->
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:210px; bottom:360px;">\(6\)</div>	<!-- 3 -->
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:210px; bottom:360px;">\(5\)</div>	<!-- 3 -->
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:320px; bottom:240px;">\(2\)</div>	<!-- 4 -->	
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:320px; bottom:240px;">\(5\)</div>	<!-- 4 -->	
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:320px; bottom:240px;">\(4\)</div>	<!-- 4 -->	
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:170px; bottom:490px;">\(3\)</div>	<!-- 5 -->	
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:170px; bottom:490px;">\(2\)</div>	<!-- 5 -->	
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:170px; bottom:490px;">\(1\)</div>	<!-- 5 -->	
-			<div class="tempstep a" data-tempstep-until="6" style="position:absolute; left:220px; bottom:490px;">\(1\)</div>	<!-- 6 -->	
-			<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:220px; bottom:490px;">\(4\)</div>	<!-- 6 -->	
-			<div class="tempstep a" data-tempstep-from="10" style="position:absolute; left:220px; bottom:490px;">\(7\)</div>	<!-- 6 -->	
-			<div style="position:absolute; left:230px; bottom:645px; width:100px;">\(\ell_t(\theta)=0\)</div> <!-- t -->
 		
 			
 			<!-- capacity and traveltime on edge s->1 -->
@@ -476,7 +427,7 @@
 
 	</div>
 	
-	<div id="Termination" class="step slide" data-x="0" data-y="0" data-scale="1" data-tempstep-number="11">
+	<div id="Termination" class="step slide" data-x="0" data-y="0" data-scale="1" data-tempstep-number="10">
 		<div class="contentBox">
 			<h2>Termination (Single Sink)</h2>	
 
@@ -511,15 +462,15 @@
 			
 			<!-- Edge 1->2 -->
 			<div class="tempstep a flow" data-tempstep-list="4-9" data-tempstep-classes="3-5:flowS" style="left:200px; bottom:150px; transform:rotate(-135deg); height:15px; width:140px; margin-top:-10px;"></div>
-			<div class="tempstep a flow" data-tempstep-list="9-11" data-tempstep-classes="10-12:flowS" style="left:100px; bottom:250px; transform:rotate(45deg); height:15px; width:140px; margin-top:-10px;"></div>
+			<div class="tempstep a flow" data-tempstep-list="9-11" data-tempstep-classes="" style="left:100px; bottom:250px; transform:rotate(45deg); height:15px; width:140px; margin-top:-10px;"></div>
 			
 			<!-- Edge 2->5 -->
-			<div class="tempstep a flow" data-tempstep-list="9-11" data-tempstep-classes="8-9:flowS" style="left:100px; bottom:250px; transform:rotate(-78deg); height:15px; width:245px; margin-top:-10px;"></div>			
+			<!--<div class="tempstep a flow" data-tempstep-list="9-11" data-tempstep-classes="8-9:flowS" style="left:100px; bottom:250px; transform:rotate(-78deg); height:15px; width:245px; margin-top:-10px;"></div>	-->		
 			
 			<!-- Graph H -->
 			<div class="tempstep a" data-tempstep-list="5-8" style="position:absolute; left:110px; bottom:470px;"><img src="images/H1.svg" width="180px" height="220px" /></div>
-			<div class="tempstep a" data-tempstep-list="5-10" style="position:absolute; left:70px; bottom:600px; color:red; font-size:120%;">\(H\)</div>
-			<div class="tempstep a" data-tempstep-list="9-10" style="position:absolute; left:5px; bottom:190px;"><img src="images/H4.svg" width="380px" height="500px" /></div>
+			<div class="tempstep a" data-tempstep-list="5-9" style="position:absolute; left:70px; bottom:600px; color:red; font-size:120%;">\(H\)</div>
+			<div class="tempstep a" data-tempstep-list="9-9" style="position:absolute; left:5px; bottom:190px;"><img src="images/H4.svg" width="380px" height="500px" /></div>
 		</div>
 			
 			
@@ -527,7 +478,7 @@
 	
 	<div id="NonTermination" class="step slide" data-x="0" data-y="0" data-scale="1" data-tempstep-number="21" style="z-index:200; background-color:white;">
 		<div class="contentBox">
-			<h2>Termination (Multi Sink)?</h2>	
+			<h2>Termination (Multi-Sink)?</h2>	
 
 				<p class="theoremstyle t tempstep a" data-tempstep-from="2">There exists a multi-source multi-sink network \(G\),<br />where IDE flows exist, but none of them terminate.</p>
 		</div>
@@ -766,10 +717,10 @@
 						<td></td><td>For any given network: Does an IDE flow exist?</td><td>Do all IDE flows terminate? I.e. does all flow volume reach a sink in finite time?</td>
 					</tr>		
 					<tr>
-						<td>single<br />source</td><td style="text-align:center;"><img class="tempstep a" data-tempstep-from="2" src="images/Yes.png" width="100" /></td><td style="text-align:center;"><img class="tempstep a" data-tempstep-from="3" src="images/Yes.png"  width="100" /></td>
+						<td>single<br />sink</td><td style="text-align:center;"><img class="tempstep a" data-tempstep-from="2" src="images/Yes.png" width="100" /></td><td style="text-align:center;"><img class="tempstep a" data-tempstep-from="3" src="images/Yes.png"  width="100" /></td>
 					</tr>
 					<tr>
-						<td>multi<br />source</td><td style="text-align:center;"><span  class="tempstep a" data-tempstep-from="5" style="color:blue; font-weight:bold; font-size:300%; line-height:100%;">?</span><br /><span  class="tempstep a" data-tempstep-from="6">&rarr; Leon Sering: <img src="images/Yes.png" width="20" />?</span></td><td style="text-align:center;"><img class="tempstep a" data-tempstep-from="4" src="images/No.png" width="100" /></td>
+						<td>multi-<br />sink</td><td style="text-align:center;"><span  class="tempstep a" data-tempstep-from="5" style="color:blue; font-weight:bold; font-size:300%; line-height:100%;">?</span><br /><span  class="tempstep a" data-tempstep-from="6">&rarr; Leon Sering: <img src="images/Yes.png" width="20" />?</span></td><td style="text-align:center;"><img class="tempstep a" data-tempstep-from="4" src="images/No.png" width="100" /></td>
 					</tr>
 				</table>
 				
