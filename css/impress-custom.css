@@ -1,4 +1,7 @@
-﻿.tempstep {transition:opacity 2s, width 2s, background 2s;}
+﻿/*.dummy {position:absolute; left:-20px; top:-20px; background-color:red; width:10px; height:10px;}*/
+.dummy {display:none;}
+
+.tempstep {transition:opacity 2s, width 2s, background 2s;}
 .tempstep.a {opacity:0;}
 .tempstep-active {opacity:1 !important;}
 
@@ -46,6 +49,7 @@
 
 .impress-on-NonTermination #example img {opacity:0 !important;}
 
+.tempClass-Alert {color:magenta;}
 
 .contentBox {width:850px;}
 
@@ -150,8 +154,8 @@ span.highlightcolor {transition: color 7s;}
 .theoremstyletop.l::before {content:"Lemma:";}
 .theoremstyletop.d::before {content:"Definition:";}
 
-
-span.vanish.past {display:none;}
+.vanish {transition:opacity 2s;}
+.past .vanish {opacity:0;}
 
 .boxed {
 	border:4px solid #000000;

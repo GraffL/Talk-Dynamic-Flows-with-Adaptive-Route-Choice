@@ -77,11 +77,11 @@ body {
 */
 .impress-enabled .step .contentBox{
     opacity: 0;
-    transition:         opacity 2s;
+    transition:         opacity 0s;
 }
 
 .impress-enabled .step .graphBox {
-	transition-delay:4s;
+	transition-delay:2s;
 }
 
 .impress-enabled .step.past .graphBox {
@@ -90,6 +90,7 @@ body {
 
 .impress-enabled .step.active .contentBox { opacity: 1;}
 
+.step {transition:opacity 0s;}
 .step.future {opacity:0;}
 
 .impress #example.future .contentBox {opacity:1;}
