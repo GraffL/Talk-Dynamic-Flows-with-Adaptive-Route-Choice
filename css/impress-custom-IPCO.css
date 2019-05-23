@@ -1,0 +1,154 @@
+body {transform:scale(1,1);}
+
+.slide {width:1300px; height:900px;}
+
+h1 {font-size:200%;}
+h2 {font-size:180%;}
+h3 {font-size:150%;}
+
+.center{
+	text-align: center;
+}
+
+
+/* Tempstep */
+
+.tempstep {transition:opacity 2s, width 2s, background 2s;}
+.tempstep.a {opacity:0;}
+.tempstep-active {opacity:1 !important;}
+
+
+.tempClass-striken {
+	text-decoration:line-through;
+}
+.tempClass-red {
+	color:red;
+}
+
+
+/* Graphs */
+
+.graph {color:black;}
+
+.vertex {position:absolute; border:2px solid black; border-radius:25px; width:20px; height:20px; transform:translate(-15px, -5px);  background-color:white; z-index:10;}
+.vertexNamed {position:absolute; border:2px solid black; border-radius:27px; width:50px; height:50px; 
+			transform:translate(-30px, -20px);  color:black; background-color:white; z-index:10; text-align:center; padding:0px;}
+.edge {position:absolute; transform-origin:0 50%; background-size:100% 100%; height:16px; z-index:5; padding:0px;}
+.flow {position:absolute; transform-origin:0 50%; background-color:green; z-index:0; transition:linear width 3s, opacity 0s;}
+.flow.r {background-color:red;}
+.flow.b {background-color:blue;}
+
+.tempClass-flowS  {width:0px !important;}
+.tempClass-flowM  {width:105px !important;}
+.tempClass-flowTrans  {left:225px !important; top:175px !important;}
+.tempClass-flowTrans2  {top:175px !important;}
+.tempClass-queueM  {width:50px !important;}
+
+
+.edge {background-image:none;}
+
+
+.blue {color:blue !important;}
+.red {color:red !important;}
+.green {color:green !important;}
+
+
+.Line {transition:linear left 3s;}
+.tempClass-Line0 {left:3px; transition:left 0s !important;}
+.tempClass-Line1 {left:22px;}
+.tempClass-Line2 {left:41px;}
+.tempClass-Line3 {left:60px;}
+.tempClass-Line4 {left:79px;}
+.tempClass-Line5 {left:98px;}
+
+
+
+
+
+/* Agenda */
+
+#Agenda {position:fixed; bottom:0px; left:3%; width:94%; height:200px; border-top:2px solid #999999; opacity;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, .1); font-family: 'Open Sans', Arial, sans-serif; font-size: 22px; letter-spacing: -1px;
+		transition:transform 2s, left 2s, bottom 2s, border 2s, border 2s, border-bottom 2s, border-top 2s, opacity 2s; transition-delay:opacity 2s;}
+
+#Agenda td {text-align:center; width:16%;}
+#Agenda .tabH1 {font-size:120%; font-weight:bold;}
+#Agenda .tabH2 {font-size:110%; font-weight:bold;}
+
+#Agenda td.ans {background-image:url(../images/Unknown.png); background-size:contain; background-repeat:no-repeat; background-position:center; transition:background-image 2s;}
+.impress-on-SS-Term #Agenda td.ans-exSS, .impress-on-MS-Ex #Agenda td.ans-exSS, .impress-on-MS-Term #Agenda td.ans-exSS, .impress-on-OverviewPre #Agenda td.ans-exSS, .impress-on-Overview #Agenda td.ans-exSS {background-image:url(../images/Yes.png);}
+.impress-on-MS-Ex #Agenda td.ans-termSS, .impress-on-MS-Term #Agenda td.ans-termSS, .impress-on-OverviewPre #Agenda td.ans-termSS, .impress-on-Overview #Agenda td.ans-termSS {background-image:url(../images/Yes.png);}
+.impress-on-MS-Term #Agenda td.ans-exMS, .impress-on-OverviewPre #Agenda td.ans-exMS, .impress-on-Overview #Agenda td.ans-exMS {background-image:url(../images/Yes.png);}
+.impress-on-OverviewPre #Agenda td.ans-termMS, .impress-on-Overview #Agenda td.ans-termMS {background-image:url(../images/No.png);}
+
+
+.impress-on-Model #Agenda, .impress-on-Title #Agenda, .impress-on-QuestionsPre #Agenda {display:none; opacity:0;} 
+
+.impress-on-Questions #Agenda {transform:scale(1.5,1.5); left:-300px; bottom:470px; border:none;}
+
+.impress-on-Overview #Agenda {bottom:620px;}
+
+
+
+/* Theoremstyles */
+
+.theoremstyle {
+	margin-left:3em;
+	margin-bottom:1em;
+}
+
+.theoremstyle::before {
+	font-variant:small-caps;
+	font-weight:bold;
+	color:#808080;
+	text-shadow: 1px 1px 4px rgba(170,170,170,0.9);
+	display:block;
+	float:left;
+	margin-left:-3em;
+}
+
+.theoremstyle.t::before {content:"Thm.:";}
+.theoremstyle.o::before {content:"Obs.:";}
+
+
+
+.proofstyle {
+	margin-left:3em;
+	margin-bottom:1em;
+}
+
+.proofstyle::before {
+	font-variant:small-caps;
+	font-weight:bold;
+	color:#808080;
+	text-shadow: 1px 1px 4px rgba(170,170,170,0.9);
+	display:block;
+	float:left;
+	margin-left:-3em;
+	content:"Proof:";
+}
+
+.proofstyle::after {
+	position:absolute;
+	right:20px;
+	bottom:-5px;
+	font-size:35px;
+	content:"□";
+}
+
+.proofstyle.t::before {content:"Proof of Thm:";}
+
+.proofstyle.i::before {content:"Idea:";}
+
+
+.theoremstyletop::before {
+	font-variant:small-caps;
+	font-weight:bold;
+	color:#808080;
+	text-shadow: 1px 1px 4px rgba(170,170,170,0.9);
+	display:block;
+}
+
+.theoremstyletop.s::before {content:"Satz:";}
+.theoremstyletop.l::before {content:"Lemma:";}
+.theoremstyletop.d::before {content:"Definition:";}
