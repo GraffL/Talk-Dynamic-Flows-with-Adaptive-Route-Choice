@@ -10,11 +10,11 @@
         gc.addEventListener(document, "keyup", function ( event ) {
 			// 'o' springt direkt zur Überblick-Folie
 			if ( event.keyCode === 79) {
-				api.goto("overview")
+				api.goto("Overview")
 			}
 			// 't' springt direkt zum Anfang
 			if ( event.keyCode === 84) {
-				api.goto("title")
+				api.goto("Title")
 			}
 			if ( event.keyCode === 81) {
 				if(document.getElementById("impress-toolbar").style.display === "none") {
@@ -42,9 +42,9 @@
       return;
 		}
 		
-		if (event.detail.next.id == "overview") {
+		if (event.detail.next.id == "Overview") {
 			document.body.classList.add("finished");
-		} else if (event.detail.next.id == "title") {
+		} else if (event.detail.next.id == "Title") {
 			document.body.classList.remove("finished");
 		} 
 		

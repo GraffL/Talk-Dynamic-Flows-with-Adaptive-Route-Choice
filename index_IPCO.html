@@ -105,13 +105,37 @@
 <div id="impress" data-transition-duration="2000" data-autoplay="0">
 
 
-	<div id="Title" class="step slide center" data-x="0" data-y="0" data-scale="1">
+	<div id="Title" class="step slide center" data-x="0" data-y="0" data-scale="1" data-tempstep-number="5">
 		<h1>Dynamic Flows with Adaptive Route Choice</h1><br />
 			<strong>Lukas Graf</strong><sup>1</sup>, Tobias Harks<sup>1</sup>, Leon Sering<sup>2</sup> <br /><br />
 			
 			<span style="font-size:70%;"><sup>1</sup> Augsburg University, <sup>2</sup> Technische Universität Berlin</span>
 			
-			<p style="position:absolute; right:20px; bottom:200px; font-weight:bold; border:2px solid; border-radius:20px; padding:10px;">IPCO 2019,<br />Ann Arbor</p>
+			<div style="position:absolute; left:0px; bottom:0px; width:100%; height:500px;">
+				<div class="tempstep" data-tempstep-classes="2-30:AA"
+						style="position:absolute; left:925px; top:300px; font-weight:bold; padding:10px; background-color:white; z-index:10; border:2px white solid; border-radius:20px; transition:border-color 2s;">
+					IPCO 2019,<br />Ann Arbor
+				</div>
+			
+				<div class="vertex tempstep a" data-tempstep-from="2" style="left:1000px; top:100px;"></div>
+				<div class="vertex tempstep a" data-tempstep-from="2" style="left:650px; top:100px;"></div>
+				<div class="vertex tempstep a" data-tempstep-from="2" style="left:650px; top:350px;"></div>
+				<div class="vertex tempstep a" data-tempstep-from="2" style="left:300px; top:100px;"></div>
+				<div class="vertex tempstep a" data-tempstep-from="2" style="left:300px; top:350px;"></div>
+				
+				<img class="edge tempstep a" data-tempstep-from="2" style="left:300px; top:100px; width:350px; transform:rotate(0deg);" src="images/Line.svg" />
+				<img class="edge tempstep a" data-tempstep-from="2" style="left:650px; top:100px; width:350px; transform:rotate(0deg);" src="images/Line.svg" />
+				<img class="edge tempstep a" data-tempstep-from="2" style="left:300px; top:350px; width:350px; transform:rotate(0deg);" src="images/Line.svg" />
+				<img class="edge tempstep a" data-tempstep-from="2" style="left:650px; top:350px; width:350px; transform:rotate(0deg);" src="images/Line.svg" />
+				<img class="edge tempstep a" data-tempstep-from="2" style="left:1000px; top:100px; width:300px; transform:rotate(90deg);" src="images/Line.svg" />
+				<img class="edge tempstep a" data-tempstep-from="2" style="left:650px; top:100px; width:430px; transform:rotate(145deg);" src="images/Line.svg" />
+				
+				<img class="car R1 tempstep a" data-tempstep-from="3" data-temp src="images/CarRed.svg" />
+				<img class="car R2 tempstep a" data-tempstep-from="3" data-temp src="images/CarRed.svg" />
+				<img class="car R3 tempstep a" data-tempstep-from="3" data-temp src="images/CarRed.svg" />
+				<img class="car B1 tempstep a" data-tempstep-from="3" data-temp src="images/CarBlue.svg" />
+			</div>
+			
 	</div>
 	
 	<div id="Model" class="step slide" data-x="1500" data-y="0" data-scale="1" data-tempstep-number="14">
@@ -184,34 +208,37 @@
 	
 	</div>
 	
-	<div id="QuestionsPre" class="step slide center" data-x="3000" data-y="0" data-scale="1">
+	<div id="QuestionsPre" class="step slide center" data-x="3000" data-y="0" data-scale="1" data-tempstep-number="1"  data-transition-duration="0">
 		
 		<h2>Agenda</h2>
-					
+							
 	</div>
 	
-	<div id="Questions" class="step slide center" data-x="3000" data-y="0" data-scale="1" data-tempstep-number="5">
+	<div id="Questions" class="step slide center" data-x="3000" data-y="0" data-scale="1" data-tempstep-number="5"  data-transition-duration="0">
 	
 		<h2>Agenda</h2>
 		
 		<p class="tempstep a" data-tempstep-from="1"><strong>Goal of this Talk:</strong> Answer <span class="tempstep a" data-tempstep-until="3" style="width:1em; margin-right:-.5em;">2</span><span class="tempstep a" data-tempstep-from="4" style="width:1em;">4</span> Questions about IDE flows:</p>
 				
-		<div class="tempstep a" data-tempstep-list="2-3" style="position:absolute; left:0px; top:420px;">Do IDE flows always exist?</div>
+		<div class="tempstep a" data-tempstep-list="2-3" style="position:absolute; left:0px; top:450px;">Do IDE flows always exist?</div>
 		
-		<div class="tempstep a" data-tempstep-list="3-3" style="position:absolute; right:0px; top:420px; text-align:right;">Do all IDE flows terminate?<br />
+		<div class="tempstep a" data-tempstep-list="3-3" style="position:absolute; right:0px; top:450px; text-align:right;">Do all IDE flows terminate?<br />
 																				I.e. does all flow volume reach a sink in finite time?</div>
+																				
+		<div class="tempstep agenda a" data-tempstep-until="1" style="position:absolute; left:-200px; top:190px; height:500px; width:140%; background-color:white; transition-duration:0s !important; "></div>
 																	
-		<div class="tempstep a" data-tempstep-until="1" style="position:absolute; left:0px; top:190px; height:220px; width:400px; background-color:white;"></div>											
-		<div class="tempstep a" data-tempstep-until="2" style="position:absolute; right:0px; top:190px; height:220px; width:400px; background-color:white;"></div>											
-		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:300px; top:260px; height:160px; width:400px; background-color:white;"></div>
+		<div class="tempstep a" data-tempstep-until="1" style="position:absolute; left:0px; top:190px; height:270px; width:400px; background-color:white;"></div>											
+		<div class="tempstep a" data-tempstep-until="2" style="position:absolute; right:0px; top:190px; height:270px; width:400px; background-color:white;"></div>											
+		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:300px; top:260px; height:190px; width:400px; background-color:white;"></div>
 		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:0px; top:190px; height:70px; width:50%; background-color:white;"></div>
 		
-		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:300px; top:260px; height:160px; width:400px; background-color:white;"></div>
+		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:300px; top:260px; height:190px; width:400px; background-color:white;"></div>
 		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:0px; top:190px; height:70px; width:50%; background-color:white;"></div>											
+		<div class="tempstep a" data-tempstep-until="5" style="position:absolute; left:-200px; top:0px; height:500px; width:200px; background-color:white;"></div>
 			
 	</div>
 
-	<div id="SS-Ex" class="step slide" data-x="4500" data-y="0" data-scale="1" data-tempstep-number="2">
+	<div id="SS-Ex" class="step slide" data-x="4500" data-y="0" data-scale="1" data-tempstep-number="13">
 		
 		<h2 class="tempstep a" data-tempstep-from="1">Single-Sink: Existence</h2>
 		
@@ -220,52 +247,53 @@
 				<span class="tempstep a" data-tempstep-from="3">and we can always "construct" such an IDE flow.</span>
 			</div>
 			
-			<div class="proofstyle i tempstep a" style="width:80%; position:absolute; top:230px;">
-				<ol style=" margin-top:-3px;">
-					<li>Given an IDE flow \(f\) up to some time \(\theta\),<br />extend \(f\) up to some time \(\theta+\varepsilon\).</li>
-					<li>Calculate inflow into nodes \(v\) at time \(\theta\)</li>
-					<li>Order nodes by their distance to sink \(t\)</li>
-					<li>Distribute node inflow to active edges such that: <br />
-						\(f_{vw}^+(\theta) > 0 \implies \dists{v,t}{\theta} = c_{vw}'(\theta) + \dists{w,t}{\theta}\)<br />
-						\(f_{vw}^+(\theta) = 0 \implies \dists{v,t}{\theta} \gt c_{vw}'(\theta) + \dists{w,t}{\theta}\)</li>
+			<div class="proofstyle i tempstep a" data-tempstep-from="4" style="width:80%; position:absolute; top:230px;">
+				<ol style=" margin-top:-3px; margin-left:-20px;">
+					<li class="tempstep a" data-tempstep-from="5">
+						Given an IDE flow \(f\) up to some time \(\theta\),<br />extend \(f\) up to some time \(\theta+\varepsilon\).</li>
+					<li class="tempstep a" data-tempstep-from="9">
+						Calculate inflow into nodes \(v\) at time \(\theta\)</li>
+					<li class="tempstep a" data-tempstep-from="10">
+						Order nodes by their distance to sink \(t\)</li>
+					<li class="tempstep a" data-tempstep-from="11">
+						Distribute node inflow to active edges such that: <br />
+							\(f_{vw}^+(\theta) > 0 \implies \dists{v,t}{\theta} = c_{vw}'(\theta) + \dists{w,t}{\theta}\)<br />
+							\(f_{vw}^+(\theta) = 0 \implies \dists{v,t}{\theta} \gt c_{vw}'(\theta) + \dists{w,t}{\theta}\)</li>
 				</ol>
-				<strong>Invariant:</strong> Flows piecewise constant, travel times change piecwise linear<br />
-				\(\implies\) Distribution stays valid for some \(\varepsilon > 0\)
+				<span class="tempstep a" data-tempstep-from="12"><strong>Invariant:</strong> Flows piecewise constant, travel times change piecwise linear</span><br />
+					<span class="tempstep a" data-tempstep-from="13">\(\implies\) Distribution stays valid for some \(\varepsilon > 0\)</span>
 			</div>
 		
-			<div class="tempstep a graph" data-tempstep-from="3" style="position:absolute; width:50%; height:400px; right:0px; top:100px;">
+			<div class="tempstep a graph" data-tempstep-from="4" style="position:absolute; width:50%; height:400px; right:0px; top:150px;">
 				<div class="vertexNamed blue" style="left:100px; top:50px;">\(s_1\)</div>
-					<div class="tempstep a blue" data-tempstep-list="5-8"  style="position:absolute; left:50px; top:-20px; width:200px;">\(u_1 = \Ind_{[0,1]}\)</div>
 				<div class="vertexNamed" style="left:100px; top:300px;">\(v_2\)</div>
+					<div class="tempstep a" data-tempstep-list="6-20"  style="position:absolute; left:80px; top:330px; width:200px; font-size:80%;">\(\dist{v_2,t}{\theta}=2\)</div>
 				<div class="vertexNamed" style="left:350px; top:50px;">\(v_1\)</div>
 				<div class="vertexNamed" style="left:350px; top:300px;">\(v_3\)</div>
 				<div class="vertexNamed red" style="left:600px; top:50px;">\(s_2\)</div>
-					<div class="tempstep a red" data-tempstep-list="5-8"  style="position:absolute; left:500px; top:-20px; width:200px;">\(u_2 = 3\cdot\Ind_{[0,1]}\)</div>
+					<div class="tempstep a" data-tempstep-list="6"  style="position:absolute; left:530px; top:-10px; width:200px; font-size:80%;">\(\dist{s_2,t}{\theta}=3\)</div>
+					<div class="tempstep a" data-tempstep-list="7"  style="position:absolute; left:530px; top:-10px; width:200px; font-size:80%;">\(\dist{s_2,t}{\theta}=2\)</div>
+					<div class="tempstep a" data-tempstep-list="8-20"  style="position:absolute; left:530px; top:-10px; width:200px; font-size:80%;">\(\dist{s_2,t}{\theta}=1\)</div>
 				<div class="vertexNamed" style="left:600px; top:300px;">\(t_{{\color{blue}1}/{\color{red}2}}\)</div>
 				
 				<!-- Edge: s1->1 -->
 				<img class="edge" style="left:120px; top:50px; width:210px; transform:rotate(0deg);" src="images/Arrow.svg" />
 					<div class="tempstep a" data-tempstep-from="4" style="position:absolute; left:180px; top:60px; width:100px;">\((\tau_e, \nu_e)\)</div>
-					<div class="tempstep a flow b" data-tempstep-list="4-8" data-tempstep-classes="1-5:flowS" style="left:120px; top:50px; transform:rotate(0deg); height:15px; width:210px;"></div>
-					<div class="tempstep a flow b" data-tempstep-from="8" data-tempstep-classes="11-20:flowS" style="left:330px; top:50px; transform:rotate(180deg); height:15px; width:210px;"></div>
+					<div class="tempstep a flow b" data-tempstep-from="5" data-tempstep-classes="8-20:flowS" style="left:330px; top:50px; transform:rotate(180deg); height:15px; width:210px;"></div>
 				<!-- Edge: 1->s2 -->
 				<img class="edge" style="left:370px; top:50px; width:210px; transform:rotate(0deg);" src="images/Arrow.svg" />
+					<div class="tempstep a flow b" data-tempstep-list="6-20" data-tempstep-classes="1-7:flowS" style="left:370px; top:50px; transform:rotate(0deg); height:15px; width:210px;"></div>
 				<!-- Edge: 1->2 -->
 				<img class="edge" style="left:350px; top:50px; width:330px; transform:rotate(135deg);" src="images/Arrow.svg" />
-					<div class="tempstep a flow b" data-tempstep-from="8" data-tempstep-classes="1-10:flowS" style="left:350px; top:50px; transform:rotate(135deg); height:15px; width:330px;"></div>
 				<!-- Edge: s2->t -->
 				<img class="edge" style="left:595px; top:70px; width:210px; transform:rotate(90deg);" src="images/Arrow.svg" />
-					<div class="tempstep a flow r" data-tempstep-from="4" data-tempstep-classes="1-5:flowS" style="left:595px; top:70px; transform:rotate(90deg); height:15px; width:210px;"></div>
+					<div class="tempstep a flow r" data-tempstep-from="5" style="left:595px; top:70px; transform:rotate(90deg); height:15px; width:210px;"></div>
 					
-					<img class="tempstep a" data-tempstep-list="7-9" src="images/QueueArrowR.svg" style="position:absolute; left:620px; top:40px; width:80px; height:70px;" />
-					<div class="tempstep a" data-tempstep-list="7-9" style="position:absolute; left:710px; top:35px; width:150px;">\(f_{2,e}^+(\theta)\)=3</div>
-					<div class="tempstep a flow r" data-tempstep-from="4" data-tempstep-classes="1-5:flowS;11-20:queueM" style="left:620px; top:100px; transform:rotate(0deg); height:40px; width:100px;"></div>
-					<div class="tempstep a red" data-tempstep-list="6-10" style="position:absolute; left:730px; top:95px; width:150px; transition-delay:1s;">\(q_e(\theta) = 2\)</div>
-					<div class="tempstep a red" data-tempstep-from="11" style="position:absolute; left:730px; top:95px; width:150px; transition-delay:1s;">\(q_e(\theta) = 1\)</div>
+					<div class="tempstep a flow r" data-tempstep-list="5-20" data-tempstep-classes="1-6:queueM;8-20:flowS" style="left:620px; top:100px; transform:rotate(0deg); height:40px; width:30px;"></div>
+					<div class="tempstep a red" data-tempstep-list="5-6" style="position:absolute; left:620px; top:140px; width:150px; font-size:80%;">\(q_e(\theta) = 2\)</div>
+					<div class="tempstep a red" data-tempstep-list="7" style="position:absolute; left:620px; top:140px; width:150px; font-size:80%;">\(q_e(\theta) = 1\)</div>
+					<div class="tempstep a red" data-tempstep-list="8-20" style="position:absolute; left:620px; top:140px; width:150px; font-size:80%;">\(q_e(\theta) = 0\)</div>
 					
-					<div class="tempstep a" data-tempstep-list="10" style="position:absolute; left:400px; top:150px; width:200px;">\(c_e(\theta)=1 + \frac{2}{1}\)</div>
-					<div class="tempstep a" data-tempstep-from="11" style="position:absolute; left:400px; top:150px; width:200px;">\(c_e(\theta)=1 + \frac{1}{1}\)</div>
-
 				<!-- Edge: 2->3 -->
 				<img class="edge" style="left:120px; top:300px; width:210px; transform:rotate(0deg);" src="images/Arrow.svg" />
 				<!-- Edge: 3->t -->
@@ -323,11 +351,11 @@
 				<img class="edge" style="left:370px; top:50px; width:210px; transform:rotate(0deg);" src="images/Arrow.svg" />
 				<!-- Edge: 1->2 -->
 				<img class="edge" style="left:350px; top:50px; width:330px; transform:rotate(135deg);" src="images/Arrow.svg" />
-					<div class="tempstep a flow b" data-tempstep-list="2-6" data-tempstep-classes="1-5:flowS;6-9:flowTrans" style="left:350px; top:50px; transform:rotate(135deg); height:15px; width:165px; transition:width 1.5s, left 1.5s 1.5s, top 1.5s 1.5s"></div>
+					<div class="tempstep a flow b" data-tempstep-list="2-6" data-tempstep-classes="1-5:flowS;6-9:flowTrans" style="left:350px; top:50px; transform:rotate(135deg); height:15px; width:165px; transition:linear width 1.5s, linear left 1.5s 1.5s, linear top 1.5s 1.5s"></div>
 					<div class="tempstep a flow b" data-tempstep-from="7" data-tempstep-classes="7-20:flowS" style="left:100px; top:300px; transform:rotate(-45deg); height:15px; width:165px; transition:width 1.5s"></div>
 				<!-- Edge: 2->s1 -->
 				<img class="edge" style="left:100px; top:280px; width:210px; transform:rotate(-90deg);" src="images/Arrow.svg" />
-					<div class="tempstep a flow b" data-tempstep-from="2" data-tempstep-classes="1-6:flowS;7-20:flowTrans2" style="left:100px; top:280px; transform:rotate(-90deg); height:15px; width:105px; transition:width 1.5s, left 1.5s 1.5s, top 1.5s 1.5s"></div>
+					<div class="tempstep a flow b" data-tempstep-from="2" data-tempstep-classes="1-6:flowS;7-20:flowTrans2" style="left:100px; top:280px; transform:rotate(-90deg); height:15px; width:105px; transition:linear width 1.5s, linear left 1.5s 1.5s, linear top 1.5s 1.5s"></div>
 				<!-- Edge: s2->t -->
 				<img class="edge" style="left:595px; top:70px; width:210px; transform:rotate(90deg);" src="images/Arrow.svg" />
 					<div class="tempstep a flow r" data-tempstep-classes="7-20:flowS" style="left:595px; top:280px; transform:rotate(-90deg); height:15px; width:210px;"></div>					
@@ -346,13 +374,13 @@
 	
 	</div>
 	
-	<div id="MS-Ex" class="step slide" data-x="7500" data-y="0" data-scale="1" data-tempstep-number="12">
+	<div id="MS-Ex" class="step slide" data-x="7500" data-y="0" data-scale="1" data-tempstep-number="13">
 		
 		<h2>Multi-Sink: Existence</h2>
 		
 			<div class="theoremstyle t tempstep a" data-tempstep-from="2" style="width:50%;">
 				In multi-sink networks IDE flows always exist. <br />
-				<span class="tempstep a" data-tempstep-from="12">(even for more general inflow rate functions \(u_i\))</span>
+				<span class="tempstep a" data-tempstep-from="13">(even for more general inflow rate functions \(u_i\))</span>
 			</div>
 			
 			<div class="proofstyle i tempstep a" data-tempstep-from="3" style="width:90%; position:absolute; top:220px;">
@@ -361,13 +389,13 @@
 					<li class="tempstep a" data-tempstep-from="4">Calculate inflow into nodes \(v\) at time \(\theta_0\)</li>
 					<li class="tempstep a" data-tempstep-from="5" data-tempstep-classes="7-20:striken;7:red" style="transition:color 2s, opacity 2s;">Order nodes by their distance to sink \(t\)</li>
 				</ol><ol start="3" style="margin-top:-20px; margin-bottom:-5px;">
-					<li class="tempstep a" data-tempstep-from="8" >Let \(K := \{g\,|\,g\) extension of \(f\) on \([\theta_0, \theta_0+\tau_{\min})\) (not nec. IDE)\(\}\)</li>
+					<li class="tempstep a" data-tempstep-from="8" >Let \(K := \{g\,|\,g\) extension of \(f\) on \([\theta_0, \theta_0+\tau_{\min})\) (not necessarily IDE)\(\}\)</li>
 					<li class="tempstep a" data-tempstep-from="9" >And consider the mapping \(\mathcal{A}: K \to L^2(\theta_0,\theta_0+\tau_{\min})^{I \times E}, g=(g_{i,e}) \mapsto h = (h_{i,e}),\)<br />
 						where \(h_{i,vw}(\theta) := \dist{v,t_i}{\theta} + \tau_e + \frac{q_e(\theta)}{\nu_e} - \dist{w,t_i}{\theta} = 0 \iff vw\) is active</li>
 				</ol>
-				<p class="tempstep a" data-tempstep-from="10" style="text-align:center;"><strong>Then:</strong> \(g \in K\) is IDE extension \(\iff \langle g, \mathcal{A}(g)\rangle = 0\)</p>
+				<p class="tempstep a" data-tempstep-from="10" style="text-align:center;"><strong>Then:</strong> \(g \in K\) is IDE extension \(\iff \langle g, \mathcal{A}(g)\rangle = 0\) <span class="tempstep a" data-tempstep-from="11">\(\iff \langle \mathcal{A}(g),g'-g\rangle \geq 0\) f.a. \(g' \in K\)</span></p>
 				<ol start="5" style="margin-top:-5px; margin-bottom:-10px;">
-					<li class="tempstep a" data-tempstep-from="11" >Such a \(g\) always exists as a solution of a corresponding variational inequality.</li>
+					<li class="tempstep a" data-tempstep-from="12" >Such a \(g\) always exists (\(\mathcal{A}\) weak-strong-continous, \(K\) non-empty, closed, convex, bounded)</li>
 				</ol>
 			</div>
 		
@@ -609,10 +637,128 @@
 	
 	</div>
 	
-	<div id="OverviewPre" class="step" data-x="9000" data-y="900" data-scale="1" style="pointer-events: none; background-image:none;">
+	<div id="OverviewPre" class="step" data-x="9000" data-y="900" data-scale="1">
     </div>
 
-    <div id="Overview" class="step" data-x="9000" data-y="900" data-scale="1" style="pointer-events: none; background-image:none;">
+    <div id="Overview" class="step slide" data-x="9000" data-y="900" data-scale="1" data-tempstep-number="10"
+			data-goto-key-list="ArrowUp VK2 3 4 5" data-goto-next-list="Model SS-Ex SS-Term MS-Ex MS-Term">
+	
+		<h2>Conclusion:</h2>
+				
+		<div class="tempstep a" data-tempstep-from="2" style="position:absolute; left:0px; top:320px; width:100%; height:600px; overflow:hidden; border-top:2px solid #999999;">
+			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:450px; width:200px;">
+				stepwise extension: <br /><br />
+				order nodes by distance to sink<br />&darr;<br />
+				distribute to active edges by waterfilling<br /><br />
+				<strong>&rarr; constructive</strong>
+			</div>
+			
+			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:670px; width:200px;">
+				growing sink: <br /><br />
+				BILD
+			</div>
+			
+			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:890px; width:200px;">
+				stepwise extension:<br /><br />
+				correct extension is solution to var. inequality:<br /><br />
+				\(\langle \mathcal{A}(g),g'-g\rangle \geq 0\)<br /><br />
+				<strong>&rarr; non-constructive</strong>
+			</div>
+			
+			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:1110px; width:200px;">
+				Gadget-Network:
+				<div class="graph" style="position:absolute; left:-40px; top:50px; transform:scale(.5,.5);">
+					<div style="position:absolute; left:-100px; top:250px; transform:scale(.5,.5);">
+						<div class="vertexNamed red" style="left:750px; top:500px;">\(s\)</div> 					<!--s1-->
+						<div class="vertex" style="left:750px; top:350px;"></div>									<!--1 -->
+						<div class="vertex" style="left:900px; top:350px;"></div>									<!--2 -->
+						<div class="vertex" style="left:900px; top:500px;"></div>									<!--3 -->
+						<div class="vertex" style="left:600px; top:350px;"></div>	<!--4 -->
+						<div class="vertex" style="left:500px; top:425px;"></div>	<!--5 -->
+						<div class="vertex" style="left:600px; top:500px;"></div>	<!--6 -->
+						
+						
+						<!-- s1->1 -->
+						<img class="edge" style="left:750px; top:500px; width:140px; transform:rotate(-90deg);" src="images/Arrow.svg" />
+						<!-- 1->2 -->
+						<img class="edge" style="left:750px; top:350px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<!-- 2->3 -->
+						<img class="edge" style="left:900px; top:350px; width:140px; transform:rotate(90deg);" src="images/Arrow.svg" />
+						<!-- 3->s1 -->
+						<img class="edge" style="left:900px; top:500px; width:130px; transform:rotate(180deg);" src="images/Arrow.svg" />
+						<!-- 1->4 -->
+						<img class="edge" style="left:750px; top:350px; width:140px; transform:rotate(180deg);" src="images/Arrow.svg" />
+						<!-- 4->5 -->
+						<img class="edge" style="left:600px; top:350px; width:120px; transform:rotate(145deg);" src="images/Arrow.svg" />
+						<!-- 5->6 -->
+						<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
+						<!-- 6->s1 -->
+						<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<!-- 1->? -->
+						<img class="edge" style="left:750px; top:350px; width:120px; transform:rotate(-90deg);" src="images/Arrow.svg" />
+					</div>
+
+					<div style="position:absolute; left:-100px; top:100px; transform:scale(.5,.5);">
+						<div class="vertexNamed red" style="left:750px; top:500px;">\(s\)</div> 					<!--s1-->
+						<div class="vertex" style="left:750px; top:350px;"></div>									<!--1 -->
+						<div class="vertex" style="left:900px; top:350px;"></div>									<!--2 -->
+						<div class="vertex" style="left:900px; top:500px;"></div>									<!--3 -->
+						<div class="vertex" style="left:600px; top:350px;"></div>	<!--4 -->
+						<div class="vertex" style="left:500px; top:425px;"></div>	<!--5 -->
+						<div class="vertex" style="left:600px; top:500px;"></div>	<!--6 -->
+						
+						
+						<!-- s1->1 -->
+						<img class="edge" style="left:750px; top:500px; width:140px; transform:rotate(-90deg);" src="images/Arrow.svg" />
+						<!-- 1->2 -->
+						<img class="edge" style="left:750px; top:350px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<!-- 2->3 -->
+						<img class="edge" style="left:900px; top:350px; width:140px; transform:rotate(90deg);" src="images/Arrow.svg" />
+						<!-- 3->s1 -->
+						<img class="edge" style="left:900px; top:500px; width:130px; transform:rotate(180deg);" src="images/Arrow.svg" />
+						<!-- 1->4 -->
+						<img class="edge" style="left:750px; top:350px; width:140px; transform:rotate(180deg);" src="images/Arrow.svg" />
+						<!-- 4->5 -->
+						<img class="edge" style="left:600px; top:350px; width:120px; transform:rotate(145deg);" src="images/Arrow.svg" />
+						<!-- 5->6 -->
+						<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
+						<!-- 6->s1 -->
+						<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<!-- 1->? -->
+						<img class="edge" style="left:750px; top:350px; width:230px; transform:rotate(-90deg);" src="images/Arrow-dashed.svg" />
+					</div>
+
+					<div style="position:absolute; left:-100px; top:-100px; transform:scale(.5,.5);">
+						<div class="vertexNamed red" style="left:750px; top:500px;">\(s\)</div> 					<!--s1-->
+						<div class="vertex" style="left:750px; top:350px;"></div>									<!--1 -->
+						<div class="vertex" style="left:900px; top:350px;"></div>									<!--2 -->
+						<div class="vertex" style="left:900px; top:500px;"></div>									<!--3 -->
+						<div class="vertex" style="left:600px; top:350px;"></div>	<!--4 -->
+						<div class="vertex" style="left:500px; top:425px;"></div>	<!--5 -->
+						<div class="vertex" style="left:600px; top:500px;"></div>	<!--6 -->
+						
+						
+						<!-- s1->1 -->
+						<img class="edge" style="left:750px; top:500px; width:140px; transform:rotate(-90deg);" src="images/Arrow.svg" />
+						<!-- 1->2 -->
+						<img class="edge" style="left:750px; top:350px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<!-- 2->3 -->
+						<img class="edge" style="left:900px; top:350px; width:140px; transform:rotate(90deg);" src="images/Arrow.svg" />
+						<!-- 3->s1 -->
+						<img class="edge" style="left:900px; top:500px; width:130px; transform:rotate(180deg);" src="images/Arrow.svg" />
+						<!-- 1->4 -->
+						<img class="edge" style="left:750px; top:350px; width:140px; transform:rotate(180deg);" src="images/Arrow.svg" />
+						<!-- 4->5 -->
+						<img class="edge" style="left:600px; top:350px; width:120px; transform:rotate(145deg);" src="images/Arrow.svg" />
+						<!-- 5->6 -->
+						<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
+						<!-- 6->s1 -->
+						<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+					</div>				
+				</div>
+			</div>
+		</div>
+		
     </div>
 </div>
 
@@ -633,8 +779,18 @@
 		</tr>
 			
 		<tr>
-			<td>Queue-Bild</td>
-			<td>IDE-Flows only use active edges</td>
+			<td><div class="graph" style="transform:scale(.7,.7); font-size:140%; margin-top:-10px;">
+				<div class="vertexNamed blue" style="left:-20px; top:50px;">\(s_i\)</div>
+				<div class="vertexNamed blue" style="left:220px; top:50px;">\(t_i\)</div>
+				<img class="edge" style="left:-20px; top:50px; width:220px; transform:rotate(0deg);" src="images/Arrow.svg" />
+				<div class="flow b" style="left:-20px; top:50px; transform:rotate(0deg); height:15px; width:120px;"></div>
+				<div class="flow b" style="left:30px; top:25px; transform:rotate(-90deg); height:40px; width:50px;"></div>
+				<img src="images/QueueArrowR.svg" style="position:absolute; left:-40px; top:-30px; width:80px; height:70px; transform:rotate(-90deg);" />
+				<div style="position:absolute; left:-50px; top:-80px; width:80px;">\(f_{i,e}^+(\theta)\)</div>
+				<div style="position:absolute; left:50px; top:-20px; width:80px;">\(q_{e}(\theta)\)</div>
+				<div style="position:absolute; left:20px; top:60px; width:150px;">\((\tau_e, \nu_e)\)</div>
+			</div></td>
+			<td>IDE-Flows only use <em>currently</em> shortest paths (active edges)</td>
 			<td class="ans ans-exSS"></td>
 			<td class="ans ans-termSS"></td>
 			<td class="ans ans-exMS"></td>

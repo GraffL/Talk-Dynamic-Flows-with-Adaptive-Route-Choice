@@ -25,6 +25,9 @@ h3 {font-size:150%;}
 	color:red;
 }
 
+.flyin {transform:translateY(-400px); transition:transform 4s; font-size:80%; text-align:center;}
+.tempClass-flyin {transform:translateY(0px);}
+
 
 /* Graphs */
 
@@ -63,6 +66,26 @@ h3 {font-size:150%;}
 
 
 
+/* Cars on Title */
+
+.tempClass-AA {border-color:black !important; color:black;}
+.car {position:absolute; transition:left 3s, top 3s, opacity 2s; width:40px; margin-left:-25px; margin-top:-40px; z-index:50;}
+.car.R1 {left:1000px;top:350px;}
+.car.R2 {left:1000px;top:260px;}
+.car.R3 {left:1000px;top:180px;}
+.car.B1 {left:300px;top:350px;}
+.on-tempstep-1 .car.R1, .on-tempstep-2 .car.R1, .on-tempstep-3 .car.R1 {left:1000px;top:100px;}
+.on-tempstep-1 .car.R2, .on-tempstep-2 .car.R2, .on-tempstep-3 .car.R2 {left:1000px;top:60px;}
+.on-tempstep-1 .car.R3, .on-tempstep-2 .car.R3, .on-tempstep-3 .car.R3 {left:1000px;top:20px;}
+.on-tempstep-1 .car.B1, .on-tempstep-2 .car.B1, .on-tempstep-3 .car.B1 {left:300px;top:100px;}
+.on-tempstep-4 .car.R1 {left:1000px;top:200px;}
+.on-tempstep-4 .car.R2 {left:1000px;top:170px;}
+.on-tempstep-4 .car.R3 {left:1000px;top:140px;}
+.on-tempstep-4 .car.B1 {left:650px;top:100px;}
+.on-tempstep-5 .car.R1 {left:1000px;top:350px;}
+.on-tempstep-5 .car.R2 {left:1000px;top:260px;}
+.on-tempstep-5 .car.R3 {left:1000px;top:180px;}
+.on-tempstep-5 .car.B1 {left:300px;top:350px;}
 
 
 /* Agenda */
@@ -71,11 +94,13 @@ h3 {font-size:150%;}
 		text-shadow: 0 2px 2px rgba(0, 0, 0, .1); font-family: 'Open Sans', Arial, sans-serif; font-size: 22px; letter-spacing: -1px;
 		transition:transform 2s, left 2s, bottom 2s, border 2s, border 2s, border-bottom 2s, border-top 2s, opacity 2s; transition-delay:opacity 2s;}
 
+#Agenda.futute .agenda {opacity:1s !important;}
+
 #Agenda td {text-align:center; width:16%;}
 #Agenda .tabH1 {font-size:120%; font-weight:bold;}
 #Agenda .tabH2 {font-size:110%; font-weight:bold;}
 
-#Agenda td.ans {background-image:url(../images/Unknown.png); background-size:contain; background-repeat:no-repeat; background-position:center; transition:background-image 2s;}
+#Agenda td.ans {background-image:url(../images/Unknown.png); background-size:contain; background-repeat:no-repeat; background-position:center; -weblit-transition:background-image 2s; transition:background-image 2s;}
 .impress-on-SS-Term #Agenda td.ans-exSS, .impress-on-MS-Ex #Agenda td.ans-exSS, .impress-on-MS-Term #Agenda td.ans-exSS, .impress-on-OverviewPre #Agenda td.ans-exSS, .impress-on-Overview #Agenda td.ans-exSS {background-image:url(../images/Yes.png);}
 .impress-on-MS-Ex #Agenda td.ans-termSS, .impress-on-MS-Term #Agenda td.ans-termSS, .impress-on-OverviewPre #Agenda td.ans-termSS, .impress-on-Overview #Agenda td.ans-termSS {background-image:url(../images/Yes.png);}
 .impress-on-MS-Term #Agenda td.ans-exMS, .impress-on-OverviewPre #Agenda td.ans-exMS, .impress-on-Overview #Agenda td.ans-exMS {background-image:url(../images/Yes.png);}
@@ -86,7 +111,7 @@ h3 {font-size:150%;}
 
 .impress-on-Questions #Agenda {transform:scale(1.5,1.5); left:-300px; bottom:470px; border:none;}
 
-.impress-on-Overview #Agenda {bottom:620px;}
+.impress-on-Overview #Agenda {bottom:600px;}
 
 
 
