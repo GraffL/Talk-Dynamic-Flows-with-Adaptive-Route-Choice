@@ -32,7 +32,7 @@
 	<link href="css/impress-custom-IPCO.css" rel="stylesheet" />
 
 	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">MathJax.Hub.Config({
-	"CommonHTML": { scale: 70, linebreaks: { automatic: true } }})
+	"CommonHTML": { scale: 85, linebreaks: { automatic: true } }})
 	</script>
 	<!-- Falls kein Internet verfügbar... -->
 	<script type="text/javascript" async src="extras/MathJax/MathJax.js?config=TeX-MML-AM_CHTML">MathJax.Hub.Config({
@@ -218,7 +218,7 @@
 	
 		<h2>Agenda</h2>
 		
-		<p class="tempstep a" data-tempstep-from="1"><strong>Goal of this Talk:</strong> Answer <span class="tempstep a" data-tempstep-until="3" style="width:1em; margin-right:-.5em;">2</span><span class="tempstep a" data-tempstep-from="4" style="width:1em;">4</span> Questions about IDE flows:</p>
+		<p class="tempstep a" data-tempstep-from="1"><strong>Goal of this Talk:</strong> Answer <span class="tempstep a" data-tempstep-until="3" style="width:1em; margin-right:-.5em;">2</span><span class="tempstep a" data-tempstep-from="4" style="width:1em;">4</span> questions about IDE flows:</p>
 				
 		<div class="tempstep a" data-tempstep-list="2-3" style="position:absolute; left:0px; top:450px;">Do IDE flows always exist?</div>
 		
@@ -229,11 +229,11 @@
 																	
 		<div class="tempstep a" data-tempstep-until="1" style="position:absolute; left:0px; top:190px; height:270px; width:400px; background-color:white;"></div>											
 		<div class="tempstep a" data-tempstep-until="2" style="position:absolute; right:0px; top:190px; height:270px; width:400px; background-color:white;"></div>											
-		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:300px; top:260px; height:190px; width:400px; background-color:white;"></div>
-		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:0px; top:190px; height:70px; width:50%; background-color:white;"></div>
+		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:300px; top:240px; height:190px; width:400px; background-color:white;"></div>
+		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:0px; top:190px; height:60px; width:50%; background-color:white;"></div>
 		
-		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:300px; top:260px; height:190px; width:400px; background-color:white;"></div>
-		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:0px; top:190px; height:70px; width:50%; background-color:white;"></div>											
+		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:300px; top:240px; height:190px; width:400px; background-color:white;"></div>
+		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:0px; top:190px; height:60px; width:50%; background-color:white;"></div>											
 		<div class="tempstep a" data-tempstep-until="5" style="position:absolute; left:-200px; top:0px; height:500px; width:200px; background-color:white;"></div>
 			
 	</div>
@@ -260,7 +260,7 @@
 							\(f_{vw}^+(\theta) > 0 \implies \dists{v,t}{\theta} = c_{vw}'(\theta) + \dists{w,t}{\theta}\)<br />
 							\(f_{vw}^+(\theta) = 0 \implies \dists{v,t}{\theta} \geq c_{vw}'(\theta) + \dists{w,t}{\theta}\)</li>
 				</ol>
-				<span class="tempstep a" data-tempstep-from="12"><strong>Invariant:</strong> Flows piecewise constant, travel times change piecwise linear</span><br />
+				<span class="tempstep a" data-tempstep-from="12"><strong>Invariant:</strong> Flows are piecewise constant, travel times change piecewise linear</span><br />
 					<span class="tempstep a" data-tempstep-from="13">\(\implies\) Distribution stays valid for some \(\varepsilon > 0\)</span>
 			</div>
 		
@@ -310,7 +310,7 @@
 		<h2>Single-Sink: Termination</h2>
 		
 			<div class="theoremstyle t tempstep a" data-tempstep-from="2" style="width:50%;">
-				In single-sink network all IDE flows terminate
+				In single-sink networks all IDE flows terminate.
 			</div>
 			
 			<div class="theoremstyle o tempstep a" data-tempstep-from="4" style="width:50%;">
@@ -322,11 +322,11 @@
 			</div>
 			
 			<div class="proofstyle t tempstep a" data-tempstep-from="5" style="width:46%; position:absolute; top:330px;">
-				Let \(H \subseteq G\) be the subgraph consisting of<br />the sink and all edges leading towards the sink.<br />
-				<span class="tempstep a" data-tempstep-from="9">&nbsp;\(\implies\) Volume of flow in \(H\) eventually stays small</span><br />
-				<span class="tempstep a" data-tempstep-from="10">&nbsp;\(\implies\) Then all queues in \(H\) are small</span><br />
-				<span class="tempstep a" data-tempstep-from="11">&nbsp;\(\implies\) \(H\) acts as a new sink</span><br />
-				<span class="tempstep a" data-tempstep-from="12">&nbsp;Add to \(H\) all edges leading into \(H\)</span>
+				&nbsp;Let \(H \subseteq G\) be the subgraph consisting of<br />the sink and all edges leading towards the sink.<br />
+				<span class="tempstep a" data-tempstep-from="9">&nbsp;\(\implies\) Volume of flow in \(H\) eventually stays small.</span><br />
+				<span class="tempstep a" data-tempstep-from="10">&nbsp;\(\implies\) All queues in \(H\) are small.</span><br />
+				<span class="tempstep a" data-tempstep-from="11">&nbsp;\(\implies\) \(H\) acts as a new sink.</span><br />
+				<span class="tempstep a" data-tempstep-from="12">&nbsp;Add to \(H\) all edges leading into \(H\).</span>
 			</div>
 			
 			
@@ -336,7 +336,7 @@
 				<div class="vertexNamed" style="left:100px; top:300px;">\(v_2\)</div>
 				<div class="vertexNamed" style="left:350px; top:50px;">\(v_1\)</div>
 				<div class="vertexNamed green" style="left:350px; top:300px;">\(s_3\)</div>
-						<div class="green" style="position:absolute; left:230px; top:350px; width:200px;">\(u_3 = 6\cdot\Ind_{[1.5,2]}\)</div>
+						<div class="green" style="position:absolute; left:220px; top:350px; width:200px;">\(u_3 = 6\cdot\Ind_{[1.5,2]}\)</div>
 				<div class="vertexNamed red" style="left:600px; top:50px;">\(s_2\)</div>
 				<div class="vertexNamed" style="left:600px; top:300px;">\(t\)</div>
 				
@@ -386,10 +386,10 @@
 			<div class="proofstyle i tempstep a" data-tempstep-from="3" style="width:90%; position:absolute; top:220px;">
 				<ol style="margin-top:-8px;">
 					<li>Given an IDE flow \(f\) up to some time \(\theta_0\), extend \(f\) up to some time \(\theta_0+\varepsilon\).</li>
-					<li class="tempstep a" data-tempstep-from="4">Calculate inflow into nodes \(v\) at time \(\theta_0\)</li>
-					<li class="tempstep a" data-tempstep-list="5-7" data-tempstep-classes="7-20:striken;7:red" style="transition:color 2s, opacity 2s;">Order nodes by their distance to sink \(t\)</li>
+					<li class="tempstep a" data-tempstep-from="4">Calculate the inflow into nodes \(v\) at time \(\theta_0\).</li>
+					<li class="tempstep a" data-tempstep-list="5-7" data-tempstep-classes="7-20:striken;7:red" style="transition:color 2s, opacity 2s;">Order nodes by their distance to sink \(t\).</li>
 				</ol><ol start="3" style="margin-top:-20px; margin-bottom:80px;">
-					<li class="tempstep a" data-tempstep-from="8" >Let \(K := \{g\,|\,g\) extension of \(f\) on \([\theta_0, \theta_0+\tau_{\min})\) (not necessarily IDE)\(\}\)</li>
+					<li class="tempstep a" data-tempstep-from="8" >Let \(K := \{g\,|\,g\) extension of \(f\) on \([\theta_0, \theta_0+\tau_{\min})\) (not necessarily IDE)\(\}\).</li>
 					<li class="tempstep a" data-tempstep-from="9" >Consider the mapping \(\mathcal{A}: K \to L^2([\theta_0,\theta_0+\tau_{\min}))^{I \times E}, g=(g_{i,e}) \mapsto h = (h_{i,e}),\)<br />
 						where \(h_{i,vw}(\theta) := \dist{w,t_i}{\theta} + c_e(\theta) - \dist{u,t_i}{\theta}\) <span class="tempstep a" data-tempstep-from="10">\(= 0 \iff vw\) is active</span></li>
 				</ol>
@@ -402,7 +402,7 @@
 				</div>
 				<p class="tempstep a" data-tempstep-from="11" style="text-align:center;"><strong>Then:</strong> \(g \in K\) is IDE extension \(\iff \langle g, \mathcal{A}(g)\rangle = 0\) <span class="tempstep a" data-tempstep-from="12">\(\iff \langle \mathcal{A}(g),g'-g\rangle \geq 0\) f.a. \(g' \in K\)</span></p>
 				<ol start="5" style="margin-top:-5px; margin-bottom:-10px;">
-					<li class="tempstep a" data-tempstep-from="13" >Such a \(g\) always exists (\(\mathcal{A}\) weak-strong-continous, \(K\) non-empty, closed, convex, bounded)</li>
+					<li class="tempstep a" data-tempstep-from="13" >Such a \(g\) always exists (\(\mathcal{A}\) weak-strong-cont., \(K\) non-empty, closed, convex, bounded).</li>
 				</ol>
 			</div>
 		
@@ -484,7 +484,7 @@
 				<div class="tempstep a flow b" data-tempstep-list="14" data-tempstep-classes="14-15:flowS;19-20:flowS" 
 							  style="left:600px; top:500px; transform:rotate(-145deg); height:15px; width:120px;"></div>
 			<!-- 6->s1 -->
-			<img class="edge tempstep a" data-tempstep-from="9" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+			<img class="edge tempstep a" data-tempstep-from="9" style="left:600px; top:500px; width:120px; transform:rotate(0deg);" src="images/Arrow.svg" />
 				<div class="tempstep a flow b" data-tempstep-list="14" data-tempstep-classes="12-13:flowS;17-18:flowS" 
 							  style="left:600px; top:500px; transform:rotate(0deg); height:15px; width:120px;"></div>
 				<div class="tempstep a flow b" data-tempstep-list="15" data-tempstep-classes="15-16:flowS;20-21:flowS" 
@@ -655,8 +655,8 @@
 		<div class="tempstep a" data-tempstep-from="2" style="position:absolute; left:0px; top:320px; width:100%; height:600px; overflow:hidden; border-top:2px solid #999999;">
 			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:450px; width:200px;">
 				stepwise extension: <br /><br />
-				order nodes by distance to sink<br />&darr;<br />
-				distribute to active edges by waterfilling<br /><br />
+				order nodes by their distance to sink<br />&darr;<br />
+				send flow to active edges by waterfilling<br /><br />
 				<strong>&rarr; constructive</strong>
 			</div>
 			
