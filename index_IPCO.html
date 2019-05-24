@@ -229,10 +229,10 @@
 																	
 		<div class="tempstep a" data-tempstep-until="1" style="position:absolute; left:0px; top:190px; height:270px; width:400px; background-color:white;"></div>											
 		<div class="tempstep a" data-tempstep-until="2" style="position:absolute; right:0px; top:190px; height:270px; width:400px; background-color:white;"></div>											
-		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:300px; top:240px; height:190px; width:400px; background-color:white;"></div>
+		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:300px; top:240px; height:210px; width:400px; background-color:white;"></div>
 		<div class="tempstep a" data-tempstep-until="3" style="position:absolute; left:0px; top:190px; height:60px; width:50%; background-color:white;"></div>
 		
-		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:300px; top:240px; height:190px; width:400px; background-color:white;"></div>
+		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:300px; top:240px; height:210px; width:400px; background-color:white;"></div>
 		<div class="tempstep a" data-tempstep-until="4" style="position:absolute; right:0px; top:190px; height:60px; width:50%; background-color:white;"></div>											
 		<div class="tempstep a" data-tempstep-until="5" style="position:absolute; left:-200px; top:0px; height:500px; width:200px; background-color:white;"></div>
 			
@@ -252,7 +252,7 @@
 					<li class="tempstep a" data-tempstep-from="5">
 						Given an IDE flow \(f\) up to some time \(\theta\),<br />extend \(f\) up to some time \(\theta+\varepsilon\).</li>
 					<li class="tempstep a" data-tempstep-from="9">
-						Calculate inflow into nodes \(v\) at time \(\theta\).</li>
+						Calculate node inflows at time \(\theta\).</li>
 					<li class="tempstep a" data-tempstep-from="10">
 						Order nodes by their distance to sink \(t\).</li>
 					<li class="tempstep a" data-tempstep-from="11">
@@ -379,19 +379,19 @@
 		<h2>Multi-Sink: Existence</h2>
 		
 			<div class="theoremstyle t tempstep a" data-tempstep-from="2" style="width:50%;">
-				In multi-sink networks IDE flows always exist. <br />
-				<span class="tempstep a" data-tempstep-from="14">(even for more general inflow rate functions \(u_i\))</span>
+				In multi-sink networks IDE flows always exist <br />
+				<span class="tempstep a" data-tempstep-from="14">(even for more general inflow rate functions \(u_i\)).</span>
 			</div>
 			
 			<div class="proofstyle i tempstep a" data-tempstep-from="3" style="width:90%; position:absolute; top:220px;">
 				<ol style="margin-top:-8px;">
 					<li>Given an IDE flow \(f\) up to some time \(\theta_0\), extend \(f\) up to some time \(\theta_0+\varepsilon\).</li>
-					<li class="tempstep a" data-tempstep-from="4">Calculate the inflow into nodes \(v\) at time \(\theta_0\).</li>
+					<li class="tempstep a" data-tempstep-from="4">Calculate the node-inflows at time \(\theta_0\).</li>
 					<li class="tempstep a" data-tempstep-list="5-7" data-tempstep-classes="7-20:striken;7:red" style="transition:color 2s, opacity 2s;">Order nodes by their distance to sink \(t\).</li>
 				</ol><ol start="3" style="margin-top:-20px; margin-bottom:80px;">
 					<li class="tempstep a" data-tempstep-from="8" >Let \(K := \{g\,|\,g\) extension of \(f\) on \([\theta_0, \theta_0+\tau_{\min})\) (not necessarily IDE)\(\}\).</li>
 					<li class="tempstep a" data-tempstep-from="9" >Consider the mapping \(\mathcal{A}: K \to L^2([\theta_0,\theta_0+\tau_{\min}))^{I \times E}, g=(g_{i,e}) \mapsto h = (h_{i,e}),\)<br />
-						where \(h_{i,vw}(\theta) := \dist{w,t_i}{\theta} + c_e(\theta) - \dist{u,t_i}{\theta}\) <span class="tempstep a" data-tempstep-from="10">\(= 0 \iff vw\) is active</span></li>
+						where \(h_{i,vw}(\theta) := \dist{w,t_i}{\theta} + c_{vw}(\theta) - \dist{w,t_i}{\theta}\) <span class="tempstep a" data-tempstep-from="10">\(= 0 \iff vw\) is active</span></li>
 				</ol>
 				<div class="tempstep a graph" data-tempstep-from="9" style="position:absolute; width:100%; height:70px; left:0px; top:250px;">
 					<div class="vertexNamed" style="left:550px; top:50px;">\(v\)</div>
@@ -554,7 +554,7 @@
 				<!-- 5->6 -->
 				<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
 				<!-- 6->s1 -->
-				<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+				<img class="edge" style="left:600px; top:500px; width:120px; transform:rotate(0deg);" src="images/Arrow.svg" />
 				<!-- 1->? -->
 				<img class="edge tempstep a" data-tempstep-from="17" style="left:750px; top:350px; width:120px; transform:rotate(-90deg);" src="images/Arrow.svg" />
 				
@@ -589,7 +589,7 @@
 				<!-- 5->6 -->
 				<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
 				<!-- 6->s1 -->
-				<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+				<img class="edge" style="left:600px; top:500px; width:120px; transform:rotate(0deg);" src="images/Arrow.svg" />
 				<!-- 1->? -->
 				<img class="edge tempstep a" data-tempstep-from="18" style="left:750px; top:350px; width:230px; transform:rotate(-90deg);" src="images/Arrow-dashed.svg" />
 				
@@ -624,7 +624,7 @@
 				<!-- 5->6 -->
 				<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
 				<!-- 6->s1 -->
-				<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+				<img class="edge" style="left:600px; top:500px; width:120px; transform:rotate(0deg);" src="images/Arrow.svg" />
 				
 				
 				<div style="position:absolute; left:600px; top:360px; width:180px; height:80px; z-index:200; transform:rotate(-90deg);">
@@ -652,15 +652,15 @@
 	
 		<h2>Conclusion:</h2>
 				
-		<div class="tempstep a" data-tempstep-from="2" style="position:absolute; left:0px; top:320px; width:100%; height:600px; overflow:hidden; border-top:2px solid #999999;">
-			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:450px; width:200px;">
+		<div class="tempstep a" data-tempstep-from="2" style="position:absolute; left:-2%; top:320px; width:104%; height:600px; overflow:hidden; border-top:2px solid #999999;">
+			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:465px; width:200px;">
 				stepwise extension: <br /><br />
 				order nodes by their distance to sink<br />&darr;<br />
 				send flow to active edges by waterfilling<br /><br />
 				<strong>&rarr; constructive</strong>
 			</div>
 			
-			<div class="tempstep flyin" data-tempstep-classes="3-20:flyin" style="position:absolute; top:20px; left:670px; width:200px;">
+			<div class="tempstep flyin" data-tempstep-classes="3-20:flyin" style="position:absolute; top:20px; left:685px; width:200px;">
 				growing sink: <br /><br />
 				<div class="graph" style="position:absolute; left:70px; top:50px; transform:scale(.5,.5);">
 					<div class="vertexNamed" style="position:absolute; left:80px; top:200px; font-size:130%;">\(t\)</div>
@@ -669,14 +669,14 @@
 				</div>
 			</div>
 			
-			<div class="tempstep flyin" data-tempstep-classes="4-20:flyin" style="position:absolute; top:20px; left:890px; width:200px;">
+			<div class="tempstep flyin" data-tempstep-classes="4-20:flyin" style="position:absolute; top:20px; left:905px; width:200px;">
 				stepwise extension:<br /><br />
 				correct extension is solution to var. inequality:<br /><br />
 				\(\langle \mathcal{A}(g),g'-g\rangle \geq 0\)<br /><br />
 				<strong>&rarr; non-constructive</strong>
 			</div>
 			
-			<div class="tempstep flyin" data-tempstep-classes="5-20:flyin" style="position:absolute; top:20px; left:1110px; width:200px;">
+			<div class="tempstep flyin" data-tempstep-classes="5-20:flyin" style="position:absolute; top:20px; left:1125px; width:200px;">
 				Gadget-Network:
 				<div class="graph" style="position:absolute; left:-40px; top:50px; transform:scale(.5,.5);">
 					<div style="position:absolute; left:-100px; top:250px; transform:scale(.5,.5);">
@@ -704,7 +704,7 @@
 						<!-- 5->6 -->
 						<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
 						<!-- 6->s1 -->
-						<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<img class="edge" style="left:600px; top:500px; width:120px; transform:rotate(0deg);" src="images/Arrow.svg" />
 						<!-- 1->? -->
 						<img class="edge" style="left:750px; top:350px; width:120px; transform:rotate(-90deg);" src="images/Arrow.svg" />
 					</div>
@@ -734,7 +734,7 @@
 						<!-- 5->6 -->
 						<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
 						<!-- 6->s1 -->
-						<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<img class="edge" style="left:600px; top:500px; width:120px; transform:rotate(0deg);" src="images/Arrow.svg" />
 						<!-- 1->? -->
 						<img class="edge" style="left:750px; top:350px; width:230px; transform:rotate(-90deg);" src="images/Arrow-dashed.svg" />
 					</div>
@@ -764,7 +764,7 @@
 						<!-- 5->6 -->
 						<img class="edge" style="left:500px; top:425px; width:120px; transform:rotate(35deg);" src="images/Arrow.svg" />
 						<!-- 6->s1 -->
-						<img class="edge" style="left:600px; top:500px; width:140px; transform:rotate(0deg);" src="images/Arrow.svg" />
+						<img class="edge" style="left:600px; top:500px; width:120px; transform:rotate(0deg);" src="images/Arrow.svg" />
 					</div>				
 				</div>
 			</div>

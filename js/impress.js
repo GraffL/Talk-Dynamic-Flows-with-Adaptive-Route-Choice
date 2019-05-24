@@ -1264,7 +1264,7 @@
 ( function( document ) {
     "use strict";
 
-    var autoplayDefault = 0;
+    var autoplayDefault = 1;
     var currentStepTimeout = 0;
     var api = null;
     var timeoutHandle = null;
