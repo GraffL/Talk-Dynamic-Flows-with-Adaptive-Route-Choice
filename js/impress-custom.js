@@ -25,8 +25,22 @@
 			}
 			if( event.keyCode == "65") {
 				document.getElementById("impress-autoplay-playpause").click();
-			}		
-			
+			}
+			if ( event.keyCode === 49) {
+				api.goto("Model")
+			}
+			if ( event.keyCode === 50) {
+				api.goto("SS-Ex")
+			}
+			if ( event.keyCode === 51) {
+				api.goto("SS-Term")
+			}
+			if ( event.keyCode === 52) {
+				api.goto("MS-Ex")
+			}
+			if ( event.keyCode === 53) {
+				api.goto("MS-Term")
+			}
 			
         }, false);
 

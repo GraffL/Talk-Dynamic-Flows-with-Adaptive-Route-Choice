@@ -3977,6 +3977,8 @@
 					tempStepCounter++;
 				}	else if(event.detail.reason == "prev") {
 					tempStepCounter--;
+				} else {
+					return;
 				}
 				step.classList.add("on-tempstep-" + tempStepCounter);
 				

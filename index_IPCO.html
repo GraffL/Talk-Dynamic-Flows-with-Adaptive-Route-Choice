@@ -208,7 +208,7 @@
 	
 	</div>
 	
-	<div id="QuestionsPre" class="step slide center" data-x="3000" data-y="0" data-scale="1" data-tempstep-number="1"  data-transition-duration="0">
+	<div id="QuestionsPre" class="step slide center" data-x="3000" data-y="0" data-scale="1" data-tempstep-number="1">
 		
 		<h2>Agenda</h2>
 							
@@ -258,7 +258,7 @@
 					<li class="tempstep a" data-tempstep-from="11">
 						Distribute node inflow to active edges such that: <br />
 							\(f_{vw}^+(\theta) > 0 \implies \dists{v,t}{\theta} = c_{vw}'(\theta) + \dists{w,t}{\theta}\)<br />
-							\(f_{vw}^+(\theta) = 0 \implies \dists{v,t}{\theta} \gt c_{vw}'(\theta) + \dists{w,t}{\theta}\)</li>
+							\(f_{vw}^+(\theta) = 0 \implies \dists{v,t}{\theta} \geq c_{vw}'(\theta) + \dists{w,t}{\theta}\)</li>
 				</ol>
 				<span class="tempstep a" data-tempstep-from="12"><strong>Invariant:</strong> Flows piecewise constant, travel times change piecwise linear</span><br />
 					<span class="tempstep a" data-tempstep-from="13">\(\implies\) Distribution stays valid for some \(\varepsilon > 0\)</span>
@@ -374,28 +374,35 @@
 	
 	</div>
 	
-	<div id="MS-Ex" class="step slide" data-x="7500" data-y="0" data-scale="1" data-tempstep-number="13">
+	<div id="MS-Ex" class="step slide" data-x="7500" data-y="0" data-scale="1" data-tempstep-number="14">
 		
 		<h2>Multi-Sink: Existence</h2>
 		
 			<div class="theoremstyle t tempstep a" data-tempstep-from="2" style="width:50%;">
 				In multi-sink networks IDE flows always exist. <br />
-				<span class="tempstep a" data-tempstep-from="13">(even for more general inflow rate functions \(u_i\))</span>
+				<span class="tempstep a" data-tempstep-from="14">(even for more general inflow rate functions \(u_i\))</span>
 			</div>
 			
 			<div class="proofstyle i tempstep a" data-tempstep-from="3" style="width:90%; position:absolute; top:220px;">
 				<ol style="margin-top:-8px;">
 					<li>Given an IDE flow \(f\) up to some time \(\theta_0\), extend \(f\) up to some time \(\theta_0+\varepsilon\).</li>
 					<li class="tempstep a" data-tempstep-from="4">Calculate inflow into nodes \(v\) at time \(\theta_0\)</li>
-					<li class="tempstep a" data-tempstep-from="5" data-tempstep-classes="7-20:striken;7:red" style="transition:color 2s, opacity 2s;">Order nodes by their distance to sink \(t\)</li>
-				</ol><ol start="3" style="margin-top:-20px; margin-bottom:-5px;">
+					<li class="tempstep a" data-tempstep-list="5-7" data-tempstep-classes="7-20:striken;7:red" style="transition:color 2s, opacity 2s;">Order nodes by their distance to sink \(t\)</li>
+				</ol><ol start="3" style="margin-top:-20px; margin-bottom:80px;">
 					<li class="tempstep a" data-tempstep-from="8" >Let \(K := \{g\,|\,g\) extension of \(f\) on \([\theta_0, \theta_0+\tau_{\min})\) (not necessarily IDE)\(\}\)</li>
-					<li class="tempstep a" data-tempstep-from="9" >And consider the mapping \(\mathcal{A}: K \to L^2(\theta_0,\theta_0+\tau_{\min})^{I \times E}, g=(g_{i,e}) \mapsto h = (h_{i,e}),\)<br />
-						where \(h_{i,vw}(\theta) := \dist{v,t_i}{\theta} + \tau_e + \frac{q_e(\theta)}{\nu_e} - \dist{w,t_i}{\theta} = 0 \iff vw\) is active</li>
+					<li class="tempstep a" data-tempstep-from="9" >Consider the mapping \(\mathcal{A}: K \to L^2([\theta_0,\theta_0+\tau_{\min}))^{I \times E}, g=(g_{i,e}) \mapsto h = (h_{i,e}),\)<br />
+						where \(h_{i,vw}(\theta) := \dist{w,t_i}{\theta} + c_e(\theta) - \dist{u,t_i}{\theta}\) <span class="tempstep a" data-tempstep-from="10">\(= 0 \iff vw\) is active</span></li>
 				</ol>
-				<p class="tempstep a" data-tempstep-from="10" style="text-align:center;"><strong>Then:</strong> \(g \in K\) is IDE extension \(\iff \langle g, \mathcal{A}(g)\rangle = 0\) <span class="tempstep a" data-tempstep-from="11">\(\iff \langle \mathcal{A}(g),g'-g\rangle \geq 0\) f.a. \(g' \in K\)</span></p>
+				<div class="tempstep a graph" data-tempstep-from="9" style="position:absolute; width:100%; height:70px; left:0px; top:250px;">
+					<div class="vertexNamed" style="left:550px; top:50px;">\(v\)</div>
+					<div class="vertexNamed" style="left:300px; top:50px;">\(w\)</div>
+					<div class="vertexNamed" style="left:0px; top:50px;">\(t_i\)</div>
+					<img class="edge" style="left:550px; top:50px; width:230px; transform:rotate(180deg);" src="images/Arrow.svg" />
+					<img class="edge" style="left:300px; top:50px; width:280px; transform:rotate(180deg);" src="images/Arrow-dashed.svg" />
+				</div>
+				<p class="tempstep a" data-tempstep-from="11" style="text-align:center;"><strong>Then:</strong> \(g \in K\) is IDE extension \(\iff \langle g, \mathcal{A}(g)\rangle = 0\) <span class="tempstep a" data-tempstep-from="12">\(\iff \langle \mathcal{A}(g),g'-g\rangle \geq 0\) f.a. \(g' \in K\)</span></p>
 				<ol start="5" style="margin-top:-5px; margin-bottom:-10px;">
-					<li class="tempstep a" data-tempstep-from="12" >Such a \(g\) always exists (\(\mathcal{A}\) weak-strong-continous, \(K\) non-empty, closed, convex, bounded)</li>
+					<li class="tempstep a" data-tempstep-from="13" >Such a \(g\) always exists (\(\mathcal{A}\) weak-strong-continous, \(K\) non-empty, closed, convex, bounded)</li>
 				</ol>
 			</div>
 		
@@ -629,7 +636,7 @@
 				<img src="images/graphQueues5Big.svg" height="100%" style="background-color:#FFFFFFDD;" />	
 			</div>
 			
-			<img class="edge tempstep a" data-tempstep-from="20" style="left:750px; top:520px; width:470px; transform:rotate(182deg);" src="images/Arrow.svg" />
+			<img class="edge tempstep a" data-tempstep-from="20" style="left:590px; top:510px; width:300px; transform:rotate(181deg);" src="images/Arrow.svg" />
 			<img class="edge tempstep a" data-tempstep-from="21" style="left:280px; top:70px; width:900px; transform:rotate(8deg);" src="images/Arrow.svg" />
 
 		</div>
@@ -641,7 +648,7 @@
     </div>
 
     <div id="Overview" class="step slide" data-x="9000" data-y="900" data-scale="1" data-tempstep-number="10"
-			data-goto-key-list="ArrowUp VK2 3 4 5" data-goto-next-list="Model SS-Ex SS-Term MS-Ex MS-Term">
+			data-goto-key-list="1 Digit2 3 4 5" data-goto-next-list="Model SS-Ex SS-Term MS-Ex MS-Term">
 	
 		<h2>Conclusion:</h2>
 				
@@ -653,19 +660,23 @@
 				<strong>&rarr; constructive</strong>
 			</div>
 			
-			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:670px; width:200px;">
+			<div class="tempstep flyin" data-tempstep-classes="3-20:flyin" style="position:absolute; top:20px; left:670px; width:200px;">
 				growing sink: <br /><br />
-				BILD
+				<div class="graph" style="position:absolute; left:70px; top:50px; transform:scale(.5,.5);">
+					<div class="vertexNamed" style="position:absolute; left:80px; top:200px; font-size:130%;">\(t\)</div>
+					<div style="position:absolute; left:20px; top:150px; width:100px; height:100px; border:2px dashed #999999; border-radius:5px 5px;"></div>
+					<div style="position:absolute; left:0px; top:80px; width:130px; height:200px; border:2px dotted #999999; border-radius:10px 10px;"></div>
+				</div>
 			</div>
 			
-			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:890px; width:200px;">
+			<div class="tempstep flyin" data-tempstep-classes="4-20:flyin" style="position:absolute; top:20px; left:890px; width:200px;">
 				stepwise extension:<br /><br />
 				correct extension is solution to var. inequality:<br /><br />
 				\(\langle \mathcal{A}(g),g'-g\rangle \geq 0\)<br /><br />
 				<strong>&rarr; non-constructive</strong>
 			</div>
 			
-			<div class="tempstep flyin" data-tempstep-classes="2-20:flyin" style="position:absolute; top:20px; left:1110px; width:200px;">
+			<div class="tempstep flyin" data-tempstep-classes="5-20:flyin" style="position:absolute; top:20px; left:1110px; width:200px;">
 				Gadget-Network:
 				<div class="graph" style="position:absolute; left:-40px; top:50px; transform:scale(.5,.5);">
 					<div style="position:absolute; left:-100px; top:250px; transform:scale(.5,.5);">
@@ -799,6 +810,11 @@
 	</table>
 </div>
 
+
+<div id="Heading">
+	<span style="float:left;">Dynamic Flows with Adaptive Route Choice</span>
+	<span style="float:right;">Lukas Graf</span>
+</div>
 
 
 <div id="impress-toolbar"></div>
